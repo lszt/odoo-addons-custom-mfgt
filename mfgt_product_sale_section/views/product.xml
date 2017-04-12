@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record id="mfgt_product_sale_section" model="ir.ui.view">
+        <field name="name">MFGT Product Sale Section</field>
+        <field name="model">product.category</field>
+        <field name="inherit_id" ref="product.product_category_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='first']" position="after">
+                <group string="Sale Layout Section">
+                    <group>
+                        <field name="sale_layout_id"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    </data>
+</odoo>

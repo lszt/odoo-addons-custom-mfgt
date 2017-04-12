@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+            <xpath expr="//table" position="before">
+                <t t-if="doc.plane_id">
+                    <div class="row mb48">
+                        <div class="col-xs-6">
+                            <b><span t-field="doc.plane_id.name"/></b><br/>
+                            Registration: <span t-field="doc.plane_id.registration"/><br/>
+                            Manufacturer: <span t-field="doc.plane_id.producer"/><br/>
+                            Type Template: <span t-field="doc.plane_id.type_template"/><br/>
+                            Marketing Designation: <span t-field="doc.plane_id.marketing_designation"/><br/>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Engine</b><br/>
+                            <span t-field="doc.plane_id.engine"/>
+                            Gasoline: <span t-field="doc.plane_id.gasoline"/>
+                        </div>
+                    </div>
+                    <div class="row mb48">
+                        <div class="col-xs-6">
+                            <t t-if="doc.plane_id.technical_contact_id">
+                                <b>Technical Contact</b><br/>
+                                <span t-field="doc.plane_id.technical_contact_id.name"/><br/>
+                                <t t-if="doc.plane_id.technical_contact_id.phone">
+                                    Phone: <span t-field="doc.plane_id.technical_contact_id.phone"/><br/>
+                                </t>
+                                <t t-if="doc.plane_id.technical_contact_id.mobile">
+                                    Mobile: <span t-field="doc.plane_id.technical_contact_id.mobile"/><br/>
+                                </t>
+                                <t t-if="doc.plane_id.technical_contact_id.fax">
+                                    Fax: <span t-field="doc.plane_id.technical_contact_id.fax"/><br/>
+                                </t>
+                                <t t-if="doc.plane_id.technical_contact_id.email">
+                                    E-Mail: <span t-field="doc.plane_id.technical_contact_id.email"/><br/>
+                                </t>
+                            </t>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Cell</b><br/>
+                            <span t-field="doc.plane_id.cell"/>
+                        </div>
+                    </div>
+                    <div class="row mb48">
+                        <div class="col-xs-6">
+                            <t t-if="doc.plane_id.notes">
+                                <b>Notes</b><br/>
+                                <span t-field="doc.plane_id.notes"/>
+                            </t>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Propeller</b><br/>
+                            <span t-field="doc.plane_id.propeller"/>
+                        </div>
+                    </div>
+                    <p style="page-break-after:always;"></p>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mfgt_partner_additions
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-12 14:42+0000\n"
+"PO-Revision-Date: 2017-04-12 14:42+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mfgt_partner_additions
+#: model:ir.model.fields,field_description:mfgt_partner_additions.field_res_partner_phone_company
+msgid "Company Phone"
+msgstr "Telefon geschäftlich"
+
+#. module: mfgt_partner_additions
+#: model:ir.model.fields,field_description:mfgt_partner_additions.field_res_partner_email2
+msgid "Email 2"
+msgstr "E-Mail 2"
+
+#. module: mfgt_partner_additions
+#: model:ir.model,name:mfgt_partner_additions.model_res_partner
+msgid "Partner"
+msgstr "Partner"
+

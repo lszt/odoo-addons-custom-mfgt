@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+
+        <record id="mfgt_partner_addions_form_view" model="ir.ui.view">
+            <field name="name">mfgt.partner.addions.form.view</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='phone']" position="after">
+                    <field name="phone_company" widget="phone"/>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="after">
+                    <field name="email2" widget="email"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

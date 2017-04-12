@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mfgt_plane_management_tree_view" model="ir.ui.view">
+            <field name="name">mfgt.plane.managment.tree.view</field>
+            <field name="model">mfgt.plane.management</field>
+            <field name="arch" type="xml">
+                <tree string="Plane Management">
+                    <field name="name"/>
+                    <field name="registration"/>
+                    <field name="next_service"/>
+                    <field name="next_service_type"/>
+                    <field name="partner_id"/>
+                    <field name="producer"/>
+                    <field name="marketing_designation"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mfgt_plane_management_form_view" model="ir.ui.view">
+            <field name="name">mfgt.plane.management.form.view</field>
+            <field name="model">mfgt.plane.management</field>
+            <field name="arch" type="xml">
+                <form string="Plane Management">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group string="Service">
+                                <field name="next_service"/>
+                                <field name="next_service_type"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Plane Data">
+                                <group>
+                                    <group string="Registration">
+                                        <field name="registration"/>
+                                        <field name="producer"/>
+                                        <field name="type_template"/>
+                                        <field name="marketing_designation"/>
+                                        <field name="partner_id"/>
+                                        <field name="technical_contact_id"/>
+                                    </group>
+                                    <group string="Engine">
+                                        <field name="engine"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group string="Cell">
+                                        <field name="cell"/>
+                                    </group>
+                                    <group string="Propeller">
+                                        <field name="propeller"/>
+                                    </group>
+                                </group>
+                                <group>
+                                    <group string="Other">
+                                        <field name="gasoline"/>
+                                        <field name="notes"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Orders">
+                                <field name="sale_ids">
+                                    <tree>
+                                        <field name="state" invisible="1"/>
+                                        <field name="name"/>
+                                        <field name="date_order"/>
+                                        <field name="amount_untaxed"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_plane_management" model="ir.actions.act_window">
+            <field name="name">Plane Mangement</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mfgt.plane.management</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_mfgt_plane_management"
+            action="action_plane_management"
+            parent="base.menu_base_partner"
+            name="Plane Mangement"
+            groups="base.group_sale_manager,base.group_sale_salesman"/>
+
+    </data>
+</odoo>

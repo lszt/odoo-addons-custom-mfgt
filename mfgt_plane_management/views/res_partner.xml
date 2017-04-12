@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="mfgt_plane_management_partner_form_view" model="ir.ui.view">
+            <field name="name">MFGT Plane Management Partner Enhancement</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Planes">
+                        <field name="plane_ids">
+                            <tree>
+                                <field name="name"/>
+                                <field name="registration"/>
+                                <field name="next_service"/>
+                                <field name="next_service_type"/>
+                                <field name="producer"/>
+                                <field name="marketing_designation"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

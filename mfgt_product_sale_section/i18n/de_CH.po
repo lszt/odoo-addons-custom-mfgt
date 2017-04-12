@@ -1,0 +1,37 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mfgt_product_sale_section
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-12 14:15+0000\n"
+"PO-Revision-Date: 2017-04-12 14:15+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mfgt_product_sale_section
+#: model:ir.model,name:mfgt_product_sale_section.model_product_category
+msgid "Product Category"
+msgstr "Produktkategorie"
+
+#. module: mfgt_product_sale_section
+#: model:ir.ui.view,arch_db:mfgt_product_sale_section.mfgt_product_sale_section
+msgid "Sale Layout Section"
+msgstr "Reportlayout"
+
+#. module: mfgt_product_sale_section
+#: model:ir.model.fields,field_description:mfgt_product_sale_section.field_product_category_sale_layout_id
+msgid "Sale layout id"
+msgstr "Sale layout id"
+
+#. module: mfgt_product_sale_section
+#: model:ir.model,name:mfgt_product_sale_section.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Auftragsposition"
+
