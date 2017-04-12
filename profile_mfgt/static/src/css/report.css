@@ -1,0 +1,17 @@
+div.page {
+    margin-left:25mm;
+    padding-top:20mm;
+}
+
+div.salesteam {
+    margin-top:-20mm;
+}
+
+div.footer {
+    text-align: center;
+    white-space: nowrap;
+}
+
+.mfgt-company-city-date-line {
+    margin-bottom: 60px;
+}

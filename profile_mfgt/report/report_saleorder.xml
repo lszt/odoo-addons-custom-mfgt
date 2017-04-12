@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <template id="report_saleorder_document"
+                  inherit_id="sale.report_saleorder_document">
+            <xpath expr="//strong[@t-if='doc.partner_shipping_id == doc.partner_invoice_id']"
+                   position="replace"/>
+            <xpath expr="//strong[@t-if='doc.partner_shipping_id != doc.partner_invoice_id']"
+                   position="replace"/>
+            <xpath expr="//div[@t-if='doc.partner_shipping_id != doc.partner_invoice_id']"
+                   position="replace"/>
+            <!-- Remove second address in right column -->
+            <xpath expr="//div[@class='row'][1]/div[2]"
+                   position="replace"/>
+            <xpath expr="//div[@t-field='doc.partner_invoice_id']"
+                   position="attributes">
+                <attribute name="t-field-options">{"widget": "contact", "fields": ["address", "name"], "no_marker": true}</attribute>
+            </xpath>
+            <!-- Remove salesperson -->
+            <xpath expr="//div[@id='informations'][1]/div[3]"
+                   position="replace"/>
+            <xpath expr="//div[@class='row'][1]" position="before">
+                <t t-set="salesperson" t-value="doc.user_id"/>
+                <t t-set="salesteam" t-value="doc.team_id"/>
+                <div t-if="salesperson" class="row" style="font-size: 7pt; margin-bottom: 10px">
+                    <div class="col-xs-5 col-xs-offset-7 salesteam">
+                        <span t-field="salesteam.name"/><br/>
+                        <span t-field="salesperson.name"/><br/>
+                        <span t-field="salesperson.phone"/> / <span t-field="salesteam.alias_name"/>@<span t-field="salesteam.alias_domain"/>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//h2" position="before">
+                <div class="mfgt-company-city-date-line col-xs-5 col-xs-offset-7">
+                    <span t-field="doc.company_id.city"/>,
+                    <span t-field="doc.date_order"
+                          t-field-options='{"date_only": true}'/>
+                </div>
+            </xpath>
+            <xpath expr="//p[@t-field='doc.date_order']" position="attributes">
+                <attribute name="t-field-options">{"date_only": true}</attribute>
+            </xpath>
+            <xpath expr="//table" position="replace">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th t-if="doc.state not in ['draft','sent']">Product No.</th>
+                            <th>Description</th>
+                            <th class="text-right">Quantity</th>
+                            <th class="text-right">Unit Price</th>
+                            <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Disc.(%)</th>
+                            <th class="text-right">Taxes</th>
+                            <th class="text-right">Price</th>
+                        </tr>
+                   </thead>
+                   <tbody class="sale_tbody">
+                        <t t-foreach="doc.order_line" t-as="l">
+                            <tr t-if="l.product_uom_qty">
+                                <td t-if="doc.state not in ['draft','sent']">
+                                    <span t-field="l.product_id.default_code"/>
+                                </td>
+                                <td>
+                                   <span t-field="l.name"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.product_uom_qty"/>
+                                    <span groups="product.group_uom" t-field="l.product_uom"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_unit"/>
+                                </td>
+                                <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                                    <span t-field="l.discount"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-esc="', '.join(map(lambda x: (x.description or x.name), l.tax_id))"/>
+                                </td>
+                                <td class="text-right">
+                                    <span t-field="l.price_subtotal"
+                                        t-field-options='{"widget": "monetary", "display_currency": "doc.pricelist_id.currency_id"}'/>
+                                </td>
+                            </tr>
+                        </t>
+                    </tbody>
+                </table>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>
