@@ -23,7 +23,6 @@
         'report/report_purchasequotation.xml',
         'report/report_purchaseorder.xml',
         'report/report_invoice.xml',
-        'views/res_partner_views.xml',
     ],
     'installable': True,
     'application': False,

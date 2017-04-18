@@ -9,3 +9,6 @@ class ResPartner(models.Model):
 
     phone_company = fields.Char('Company Phone')
     email2 = fields.Char('Email 2')
+    #x_mfgt_member_number = fields.Integer('MFGT Mitgliedernummer')
+    #x_mfgt_member_since = fields.Date('MFGT Mitglied seit')
+    #x_mfgt_member_until = fields.Date('MFGT Mitglied bis')
