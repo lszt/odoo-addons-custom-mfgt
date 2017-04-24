@@ -23,6 +23,8 @@
         'report/report_purchasequotation.xml',
         'report/report_purchaseorder.xml',
         'report/report_invoice.xml',
+        'data/report_paperformat.xml',
+        'report/product_label.xml',
     ],
     'installable': True,
     'application': False,
