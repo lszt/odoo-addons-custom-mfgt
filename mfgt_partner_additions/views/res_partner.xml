@@ -17,9 +17,11 @@
                 <notebook position="inside">
                     <page string="MFGT">
                         <group>
-                            <field name="x_mfgt_member_number"/>
-                            <field name="x_mfgt_member_since"/>
-                            <field name="x_mfgt_member_until"/>
+                            <group string="Membership">
+                                <field name="x_mfgt_member_number"/>
+                                <field name="x_mfgt_member_since"/>
+                                <field name="x_mfgt_member_until"/>
+                            </group>
                         </group>
                     </page>
                 </notebook>

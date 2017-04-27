@@ -15,7 +15,7 @@
                         </div>
                         <div class="col-xs-6">
                             <b>Engine</b><br/>
-                            <span t-field="doc.plane_id.engine"/>
+                            <span t-field="doc.plane_id.engine"/><br/>
                             Gasoline: <span t-field="doc.plane_id.gasoline"/>
                         </div>
                     </div>

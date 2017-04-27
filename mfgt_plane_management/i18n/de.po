@@ -28,7 +28,7 @@ msgstr "<b>Motor</b><br/>"
 #. module: mfgt_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Notes</b><br/>"
-msgstr "<b>Inofrmationen</b><br/>"
+msgstr "<b>Informationen</b><br/>"
 
 #. module: mfgt_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
