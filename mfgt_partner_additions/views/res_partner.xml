@@ -17,9 +17,16 @@
                 <notebook position="inside">
                     <page string="MFGT">
                         <group>
-                            <field name="x_mfgt_member_number"/>
-                            <field name="x_mfgt_member_since"/>
-                            <field name="x_mfgt_member_until"/>
+                            <group string="Membership">
+                                <field name="x_mfgt_member_number"/>
+                                <field name="x_mfgt_member_since"/>
+                                <field name="x_mfgt_member_until"/>
+                            </group>
+                            <group string="Caution">
+                                <field name="mfgt_caution"/>
+                                <field name="mfgt_caution_payed"/>
+                                <field name="mfgt_caution_payed_back"/>
+                            </group>
                         </group>
                     </page>
                 </notebook>

@@ -15,7 +15,7 @@ class SaleOrderLine(models.Model):
 
     @api.model
     def create(self, vals):
-        product_id = self.env['product.template'].browse(vals['product_id'])
+        product_id = self.env['product.product'].browse(vals['product_id'])
         if product_id.categ_id.sale_layout_id:
             vals['sale_layout_cat_id'] = product_id.categ_id.sale_layout_id.id
         res = super(SaleOrderLine, self).create(vals)

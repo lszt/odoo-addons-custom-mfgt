@@ -3,3 +3,5 @@
 # this module contains the full copyright notices and license terms.
 
 from . import ir_qweb_field
+from . import sale_order
+from . import account_invoice

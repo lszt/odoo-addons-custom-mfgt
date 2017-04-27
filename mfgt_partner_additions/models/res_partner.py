@@ -12,3 +12,6 @@ class ResPartner(models.Model):
     x_mfgt_member_number = fields.Integer('MFGT Mitgliedernummer')
     x_mfgt_member_since = fields.Date('MFGT Mitglied seit')
     x_mfgt_member_until = fields.Date('MFGT Mitglied bis')
+    mfgt_caution = fields.Float('Caution')
+    mfgt_caution_payed = fields.Date('Caution payed')
+    mfgt_caution_payed_back = fields.Date('Caution payed back')
