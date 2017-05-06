@@ -10,6 +10,7 @@
                 <xpath expr="//notebook" position="before">
                     <group>
                         <field name="plane_id"/>
+                        <field name="plane_special_information" attrs="{'invisible': [('plane_id', '=', False)]}"/>
                     </group>
                 </xpath>
             </field>
