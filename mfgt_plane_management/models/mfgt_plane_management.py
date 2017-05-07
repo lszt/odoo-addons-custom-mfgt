@@ -4,21 +4,61 @@
 from openerp import models, fields, api, _
 
 
+class MFGTSupplementTypeCertificate(models.Model):
+    _name = 'mfgt.plane.stc'
+
+    name = fields.Char('Name', required=True)
+    description = fields.Char('Description', required=True)
+
+
+class MFGTMinorChangeApprovals(models.Model):
+    _name = 'mfgt.plane.mca'
+
+    name = fields.Char('Name', required=True)
+    description = fields.Char('Description', required=True)
+
 class MFGTPlaneManagement(models.Model):
     _name='mfgt.plane.management'
 
     name = fields.Char('Plante Name', required=True)
     registration = fields.Char('Registration', required=True)
-    producer = fields.Char('Producer', required=True)
-    type_template = fields.Char('Type Template', required=True)
-    marketing_designation = fields.Char('Marketing Designation')
-    cell = fields.Text('Cell', required=True)
-    engine = fields.Text('Engine', required=True)
-    propeller = fields.Text('Propeller', required=True)
+    manufacturer = fields.Char('Producer', required=True)
+    type = fields.Char('Type', required=True)
+    factory_number = fields.Char('Factory Number', required=True)
+    construction_year = fields.Char('Construction Year', required=True)
+    tcds_no = fields.Char('TCDS No.', required=True)
+    legal_base = fields.Char('Legal Base', required=True)
+    registration = fields.Char('Registration', required=True)
+    commercial_use = fields.Selection([('yes', 'Yes'), ('no', 'No')], string='Commercial Use', requred=True)
+    noise_level = fields.Char('Noise Level', required=True)
+    noise_rate_class = fields.Char('Noise Rate Class', required=True)
     gasoline = fields.Char('Gasoline', required=True)
+    max_takeoff_weight = fields.Char('Max. Take Off Weight', required=True)
+
+    engine_manufacturer = fields.Char('Manufacturer', required=True)
+    engine_type = fields.Char('Type', required=True)
+    engine_number = fields.Char('Number', required=True)
+    engine_construction_year = fields.Char('Construction Year', required=True)
+    engine_tcds_no = fields.Char('TCDS No.', required=True)
+
+    propeller_manufacturer = fields.Char('Manufacturer', required=True)
+    propeller_type = fields.Char('Type', required=True)
+    propeller_number = fields.Char('Number', required=True)
+    propeller_construction_year = fields.Char('Construction Year', required=True)
+    propeller_tcds_no = fields.Char('TCDS No.', required=True)
+
+    supplement_type_certificate_ids = fields.Many2many(comodel_name='mfgt.plane.stc', string='Supplement Type Certificate')
+
+    minor_change_approval_ids = fields.Many2many(comodel_name='mfgt.plane.mca', string='Minor Change Aproval')
+
     notes = fields.Text('Notes')
-    partner_id = fields.Many2one('res.partner', string='Owner', required=True)
-    sale_ids = fields.One2many('sale.order', 'plane_id', string='Sale Orders')
+    partner_id = fields.Many2one('res.partner', string='Owner')
+    owner_id = fields.Many2one('res.partner', string='Owner', required=True)
+    sale_ids = fields.Many2many('sale.order', 'plane_id', string='Sale Orders')
     next_service = fields.Date('Next Service')
     next_service_type = fields.Char('Service Type')
+
     technical_contact_id = fields.Many2one('res.partner', string='Technical Contact')
+    technical_contact_phone = fields.Char(related='technical_contact_id.phone', string='Phone')
+    technical_contact_email = fields.Char(related='technical_contact_id.email', string='Email')
+

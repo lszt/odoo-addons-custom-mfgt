@@ -15,8 +15,8 @@
                                 <field name="registration"/>
                                 <field name="next_service"/>
                                 <field name="next_service_type"/>
-                                <field name="producer"/>
-                                <field name="marketing_designation"/>
+                                <field name="manufacturer"/>
+                                <field name="type"/>
                             </tree>
                         </field>
                     </page>

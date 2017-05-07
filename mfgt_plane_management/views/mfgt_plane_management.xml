@@ -2,18 +2,108 @@
 <odoo>
     <data>
 
+        <menuitem
+            id="menu_mfgt_plane_management"
+            parent="base.menu_base_partner"
+            name="Plane Mangement"
+            groups="base.group_sale_manager,base.group_sale_salesman"/>
+
+        <record id="mfgt_plane_stc_tree_view" model="ir.ui.view">
+            <field name="name">mfgt.plane.stc.tree.view</field>
+            <field name="model">mfgt.plane.stc</field>
+            <field name="arch" type="xml">
+                <tree string="Supplement Type Certificates (STC)">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mfgt_plane_management_form_view" model="ir.ui.view">
+            <field name="name">mfgt.plane.stc.form.view</field>
+            <field name="model">mfgt.plane.stc</field>
+            <field name="arch" type="xml">
+                <form string="Supplement Type Certificate">
+                    <sheet>
+                        <group >
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_plane_stc" model="ir.actions.act_window">
+            <field name="name">Supplement Type Certificates</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mfgt.plane.stc</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_mfgt_planes_stc"
+            action="action_plane_stc"
+            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            name="Supplement Type Certificates"
+            sequence="20"
+            groups="base.group_sale_manager,base.group_sale_salesman"/>
+
+        <record id="mfgt_plane_mca_tree_view" model="ir.ui.view">
+            <field name="name">mfgt.plane.mca.tree.view</field>
+            <field name="model">mfgt.plane.mca</field>
+            <field name="arch" type="xml">
+                <tree string="Supplement Type Certificates">
+                    <field name="name"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mfgt_plane_mca_form_view" model="ir.ui.view">
+            <field name="name">mfgt.plane.mca.form.view</field>
+            <field name="model">mfgt.plane.mca</field>
+            <field name="arch" type="xml">
+                <form string="Supplement Type Certificate">
+                    <sheet>
+                        <group >
+                            <field name="name"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_plane_mca" model="ir.actions.act_window">
+            <field name="name">Minor Change Approvals</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mfgt.plane.stc</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_mfgt_planes_mca"
+            action="action_plane_mca"
+            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            name="Minor Change Approvals"
+            sequence="30"
+            groups="base.group_sale_manager,base.group_sale_salesman"/>
+
         <record id="mfgt_plane_management_tree_view" model="ir.ui.view">
             <field name="name">mfgt.plane.managment.tree.view</field>
             <field name="model">mfgt.plane.management</field>
             <field name="arch" type="xml">
-                <tree string="Plane Management">
+                <tree string="Planes">
                     <field name="name"/>
                     <field name="registration"/>
                     <field name="next_service"/>
                     <field name="next_service_type"/>
-                    <field name="partner_id"/>
-                    <field name="producer"/>
-                    <field name="marketing_designation"/>
+                    <field name="owner_id"/>
+                    <field name="manufacturer"/>
+                    <field name="type"/>
                 </tree>
             </field>
         </record>
@@ -22,14 +112,18 @@
             <field name="name">mfgt.plane.management.form.view</field>
             <field name="model">mfgt.plane.management</field>
             <field name="arch" type="xml">
-                <form string="Plane Management">
+                <form string="Plane">
                     <sheet>
                         <div class="oe_title">
                             <h1>
                                 <field name="name"/>
+                                <label for="name" string="Bezeichnung" class="oe_edit_only"/>
                             </h1>
                         </div>
                         <group>
+                            <group string="Owner">
+                                <field name="owner_id" domain="[('customer','=',True)]"/>
+                            </group>
                             <group string="Service">
                                 <field name="next_service"/>
                                 <field name="next_service_type"/>
@@ -38,31 +132,62 @@
                         <notebook>
                             <page string="Plane Data">
                                 <group>
-                                    <group string="Registration">
-                                        <field name="registration"/>
-                                        <field name="producer"/>
-                                        <field name="type_template"/>
-                                        <field name="marketing_designation"/>
-                                        <field name="partner_id"/>
+                                    <group string="Technical Contact">
                                         <field name="technical_contact_id"/>
+                                        <field name="technical_contact_phone" readonly="1"/>
+                                        <field name="technical_contact_email" readonly="1"/>
                                     </group>
-                                    <group string="Engine">
-                                        <field name="engine"/>
-                                    </group>
-                                </group>
-                                <group>
-                                    <group string="Cell">
-                                        <field name="cell"/>
-                                    </group>
-                                    <group string="Propeller">
-                                        <field name="propeller"/>
+                                    <group string="Information">
+                                        <field name="notes" nolabel="1"/>
                                     </group>
                                 </group>
                                 <group>
-                                    <group string="Other">
+                                    <group string="Plane">
+                                        <field name="registration"/>
+                                        <field name="manufacturer"/>
+                                        <field name="type"/>
+                                        <field name="factory_number"/>
+                                        <field name="construction_year"/>
+                                        <field name="tcds_no"/>
+                                        <field name="legal_base"/>
+                                        <field name="commercial_use"/>
+                                        <field name="noise_level"/>
+                                        <field name="noise_rate_class"/>
                                         <field name="gasoline"/>
-                                        <field name="notes"/>
+                                        <field name="max_takeoff_weight"/>
                                     </group>
+                                    <group>
+                                    <group string="Engine" colspan="4">
+                                        <field name="engine_manufacturer"/>
+                                        <field name="engine_type"/>
+                                        <field name="engine_number"/>
+                                        <field name="engine_construction_year"/>
+                                        <field name="engine_tcds_no"/>
+                                    </group>
+                                    <group string="Propeller" colspan="4">
+                                        <field name="propeller_manufacturer"/>
+                                        <field name="propeller_type"/>
+                                        <field name="propeller_number"/>
+                                        <field name="propeller_construction_year"/>
+                                        <field name="propeller_tcds_no"/>
+                                    </group>
+                                    </group>
+                                </group>
+                                <group string="Supplement Type Certificates">
+                                    <field name="supplement_type_certificate_ids" nolabel="1">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                                <group string="Minor Change Approvals">
+                                    <field name="minor_change_approval_ids" nolabel="1">
+                                        <tree>
+                                            <field name="name"/>
+                                            <field name="description"/>
+                                        </tree>
+                                    </field>
                                 </group>
                             </page>
                             <page string="Orders">
@@ -82,7 +207,7 @@
         </record>
 
         <record id="action_plane_management" model="ir.actions.act_window">
-            <field name="name">Plane Mangement</field>
+            <field name="name">Planes</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">mfgt.plane.management</field>
             <field name="view_type">form</field>
@@ -90,10 +215,11 @@
         </record>
 
         <menuitem
-            id="menu_mfgt_plane_management"
+            id="menu_mfgt_planes"
             action="action_plane_management"
-            parent="base.menu_base_partner"
-            name="Plane Mangement"
+            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            name="Planes"
+            sequence="10"
             groups="base.group_sale_manager,base.group_sale_salesman"/>
 
     </data>

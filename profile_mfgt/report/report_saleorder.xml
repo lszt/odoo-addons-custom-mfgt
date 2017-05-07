@@ -41,7 +41,7 @@
             <xpath expr="//p[@t-field='doc.date_order']" position="attributes">
                 <attribute name="t-field-options">{"date_only": true}</attribute>
             </xpath>
-            <xpath expr="//table" position="replace">
+            <xpath expr="//table[@class='table table-condensed']" position="replace">
                 <table class="table table-condensed">
                     <thead>
                         <tr>
