@@ -27,11 +27,11 @@
                                         <div t-field="move.location_dest_id"/>
                                     </div>
                                     <div class="col-xs-5">
-                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.origin, 2000, 2000)" style="width:80px;height:80px;"/>
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', move.product_id.default_code, 2000, 2000)" style="width:80px;height:80px;"/>
                                     </div>
                                     <div class="col-xs-12">
                                         <div style="padding-top:5px;">
-                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', move.product_id.default_code, 2000, 200)" style="width:250px; height:25px;"/>
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.origin, 2000, 200)" style="width:250px; height:25px;"/>
                                         </div>
                                     </div>
                                 </div>
@@ -61,11 +61,11 @@
                                         <div t-field="pack_operation.location_dest_id" style="white-space:nowrap; overflow:hidden;"/>
                                     </div>
                                     <div class="col-xs-4" style="top:-5px; left:-15px;">
-                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', o.origin, 2000, 2000)" style="width:100px; height:100px;"/>
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', pack_operation.product_id.default_code, 2000, 2000)" style="width:100px; height:100px;"/>
                                     </div>
                                     <div class="col-xs-7" style="top:-5px;">
                                         <div>
-                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', pack_operation.product_id.default_code, 2000, 200)" style="width:250px; height:25px;"/>
+                                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.origin, 2000, 200)" style="width:250px; height:25px;"/>
                                         </div>
                                     </div>
                                 </div>

@@ -36,7 +36,7 @@
                     </div>
                     <div class="row mfgtsopl" style="font-size:12px;">
                         <div class="col-xs-6">
-                            <b><span t-field="doc.plane_id.registration"/></b>
+                            <b><span t-field="doc.plane_id.name"/></b>
                             <table>
                                 <tr>
                                     <td class="width">Manufacturer</td>

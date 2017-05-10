@@ -19,15 +19,19 @@
             </field>
         </record>
 
-        <record id="mfgt_plane_management_form_view" model="ir.ui.view">
+        <record id="mfgt_plane_stc_form_view" model="ir.ui.view">
             <field name="name">mfgt.plane.stc.form.view</field>
             <field name="model">mfgt.plane.stc</field>
             <field name="arch" type="xml">
                 <form string="Supplement Type Certificate">
                     <sheet>
                         <group >
-                            <field name="name"/>
-                            <field name="description"/>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
@@ -68,8 +72,12 @@
                 <form string="Supplement Type Certificate">
                     <sheet>
                         <group >
-                            <field name="name"/>
-                            <field name="description"/>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="description"/>
+                            </group>
                         </group>
                     </sheet>
                 </form>
@@ -79,7 +87,7 @@
         <record id="action_plane_mca" model="ir.actions.act_window">
             <field name="name">Minor Change Approvals</field>
             <field name="type">ir.actions.act_window</field>
-            <field name="res_model">mfgt.plane.stc</field>
+            <field name="res_model">mfgt.plane.mca</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
@@ -143,13 +151,13 @@
                                 </group>
                                 <group>
                                     <group string="Plane">
-                                        <field name="registration"/>
                                         <field name="manufacturer"/>
                                         <field name="type"/>
                                         <field name="factory_number"/>
                                         <field name="construction_year"/>
                                         <field name="tcds_no"/>
                                         <field name="legal_base"/>
+                                        <field name="registration"/>
                                         <field name="commercial_use"/>
                                         <field name="noise_level"/>
                                         <field name="noise_rate_class"/>
