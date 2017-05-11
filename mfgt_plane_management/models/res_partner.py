@@ -7,4 +7,4 @@ from openerp import models, fields, api, _
 class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    plane_ids = fields.One2many('mfgt.plane.management', 'partner_id', string='Planes')
+    plane_ids = fields.One2many('mfgt.plane.management', 'owner_id', string='Planes')

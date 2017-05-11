@@ -191,7 +191,7 @@ msgstr "Minor Change Aproval"
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_stc_name
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Name"
-msgstr "Bezeichnung"
+msgstr "TC/STC"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_next_service
