@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+       <template id="report_invoice_document_plane_management" inherit_id="profile_mfgt.report_invoice_document">
+            <xpath expr="//div[@id='informations']" position="after">
+
+                <t t-if="o.sale_id.plane_id">
+                    <div class="row mfgtsopl">
+                        <div class="col-xs-6">
+                            <b>Technical Contact</b>
+                            <table>
+                                <tr>
+                                    <td class="width">Name</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.technical_contact_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Phone</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.technical_contact_id.phone"/></td>
+                                </tr>
+                                <tr>
+                                    <td>E-Mail</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.technical_contact_id.email"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Informations</b><br/>
+                            <span t-field="o.sale_id.plane_special_information"/>
+                        </div>
+                    </div>
+                    <div class="row mfgtsopl" style="font-size:12px;">
+                        <div class="col-xs-6">
+                            <b><span t-field="o.sale_id.plane_id.name"/></b>
+                            <table>
+                                <tr>
+                                    <td class="width">Manufacturer</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.manufacturer"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.type"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Factory Number</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.factory_number"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Construction Year</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.construction_year"/></td>
+                                </tr>
+                                <tr>
+                                    <td>TCDS No.</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.tcds_no"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Legal Base</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.legal_base"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Registration</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.registration"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Commercial Use</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.commercial_use"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Noise Level</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.noise_level"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Noise Rate Class</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.noise_rate_class"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Gasoline</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.gasoline"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Max. Take-Off Weight</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.max_takeoff_weight"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Engine</b>
+                            <table>
+                                <tr>
+                                    <td class="width">Manufacturer</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.engine_manufacturer"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.engine_type"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Number</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.engine_number"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Construction Year</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.engine_construction_year"/></td>
+                                </tr>
+                                <tr>
+                                    <td>TCDS No.</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.engine_tcds_no"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Propeller</b>
+                            <table>
+                                <tr>
+                                    <td class="width">Manufacturer</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.propeller_manufacturer"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.propeller_type"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Number</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.propeller_number"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Construction Year</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.propeller_construction_year"/></td>
+                                </tr>
+                                <tr>
+                                    <td>TCDS No.</td>
+                                    <td class="border-left"><span t-field="o.sale_id.plane_id.propeller_tcds_no"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row mfgtsopl">
+                        <div class="col-xs-6">
+                            <b>Supplement Type Certificate (STC)</b>
+                            <table>
+                                <tr t-foreach="o.sale_id.plane_id.supplement_type_certificate_ids" t-as="stc">
+                                    <td class="width"><span t-field="stc.name"/></td>
+                                    <td class="padding"><span t-field="stc.description"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-xs-6">
+                            <b>Minor Change Approval</b>
+                            <table>
+                                <tr t-foreach="o.sale_id.plane_id.minor_change_approval_ids" t-as="mca">
+                                    <td class="width"><span t-field="mca.name"/></td>
+                                    <td class="padding"><span t-field="mca.description"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <p style="page-break-after:always;"></p>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

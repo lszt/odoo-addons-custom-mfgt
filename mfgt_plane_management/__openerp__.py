@@ -11,13 +11,17 @@ Mangemant Tool for Aircraft Planes
     """,
     'depends' : [
         'sale',
+        'account',
+        'profile_mfgt',
     ],
     'data': [
         'security/ir.model.access.csv',
         'reports/report_saleorder_document.xml',
+        'reports/report_invoice_document.xml',
         'views/mfgt_plane_management.xml',
         'views/res_partner.xml',
         'views/sale.xml',
+        'views/account.xml',
     ],
     'installable': True,
     'auto_install': False,
