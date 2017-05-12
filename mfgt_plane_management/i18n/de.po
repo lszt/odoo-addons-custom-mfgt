@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* mfgt_plane_management
+#   * mfgt_plane_management
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-30 10:51+0000\n"
-"PO-Revision-Date: 2017-05-30 10:51+0000\n"
+"POT-Creation-Date: 2017-05-12 08:20+0000\n"
+"PO-Revision-Date: 2017-05-12 08:20+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,31 +16,37 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Engine</b>"
 msgstr "<b>Motor</b>"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Informations</b><br/>"
 msgstr "<b>Informationen</b><br/>"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Minor Change Approval</b>"
 msgstr "<b>Minor Change Approval</b>"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Propeller</b>"
 msgstr "<b>Propeller</b>"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Supplement Type Certificate (STC)</b>"
 msgstr "<b>Supplement Type Certificate (STC)</b>"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "<b>Technical Contact</b>"
 msgstr "<b>Technischer Ansprechpartner</b><br/>"
@@ -52,6 +58,7 @@ msgstr "Bezeichnung"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_commercial_use
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Commercial Use"
 msgstr "Kommerzielle Nutzung"
@@ -60,6 +67,7 @@ msgstr "Kommerzielle Nutzung"
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_construction_year
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_engine_construction_year
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_propeller_construction_year
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Construction Year"
 msgstr "Baujahr"
@@ -92,6 +100,7 @@ msgid "Display Name"
 msgstr "Anzeigename"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "E-Mail"
 msgstr "E-Mail"
@@ -108,12 +117,14 @@ msgstr "Motor"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_factory_number
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Factory Number"
 msgstr "Werknummer"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_gasoline
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Gasoline"
 msgstr "Treibstoff"
@@ -129,6 +140,11 @@ msgstr "ID"
 #: model:ir.ui.view,arch_db:mfgt_plane_management.mfgt_plane_management_form_view
 msgid "Information"
 msgstr "Information"
+
+#. module: mfgt_plane_management
+#: model:ir.model,name:mfgt_plane_management.model_account_invoice
+msgid "Invoice"
+msgstr "Rechnung"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management___last_update
@@ -153,6 +169,7 @@ msgstr "Zuletzt aktualisiert am"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_legal_base
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Legal Base"
 msgstr "Rechtsgrundlage"
@@ -160,6 +177,7 @@ msgstr "Rechtsgrundlage"
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_engine_manufacturer
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_propeller_manufacturer
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Manufacturer"
 msgstr "Hersteller"
@@ -170,6 +188,7 @@ msgid "Max. Take Off Weight"
 msgstr "Max. Abflugmasse"
 
 #. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Max. Take-Off Weight"
 msgstr "Max. Abflugmasse"
@@ -189,9 +208,10 @@ msgstr "Minor Change Aproval"
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_mca_name
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_stc_name
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Name"
-msgstr "TC/STC"
+msgstr "Bezeichnung"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_next_service
@@ -205,12 +225,14 @@ msgstr "Nein"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_noise_level
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Noise Level"
 msgstr "Lärmpegel"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_noise_rate_class
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Noise Rate Class"
 msgstr "Lärm. Gebührenklasse"
@@ -223,9 +245,10 @@ msgstr "Notizen"
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_engine_number
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_propeller_number
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Number"
-msgstr "Werknummer"
+msgstr "Nummer"
 
 #. module: mfgt_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.mfgt_plane_management_form_view
@@ -246,6 +269,7 @@ msgstr "Partner"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_technical_contact_phone
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Phone"
 msgstr "Telefon"
@@ -292,9 +316,15 @@ msgstr "Propeller"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_registration
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Registration"
 msgstr "Zulassung"
+
+#. module: mfgt_plane_management
+#: model:ir.model.fields,field_description:mfgt_plane_management.field_account_invoice_sale_id
+msgid "Sale Order"
+msgstr "Verkaufsauftrag"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_sale_ids
@@ -324,6 +354,7 @@ msgstr "Besondere Informationen"
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_supplement_type_certificate_ids
 #: model:ir.ui.view,arch_db:mfgt_plane_management.mfgt_plane_mca_form_view
+#: model:ir.ui.view,arch_db:mfgt_plane_management.mfgt_plane_stc_form_view
 msgid "Supplement Type Certificate"
 msgstr "Supplement Type Certificate"
 
@@ -344,6 +375,7 @@ msgstr "Supplement Type Certificates (STC)"
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_engine_tcds_no
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_propeller_tcds_no
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_tcds_no
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "TCDS No."
 msgstr "TCDS No."
@@ -358,9 +390,10 @@ msgstr "Technischer Kontakt"
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_engine_type
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_propeller_type
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_type
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Type"
-msgstr "Typ / Bezeichnung"
+msgstr "Typ"
 
 #. module: mfgt_plane_management
 #: selection:mfgt.plane.management,commercial_use:0
@@ -381,4 +414,3 @@ msgstr "mfgt.plane.mca"
 #: model:ir.model,name:mfgt_plane_management.model_mfgt_plane_stc
 msgid "mfgt.plane.stc"
 msgstr "mfgt.plane.stc"
-
