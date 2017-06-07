@@ -16,14 +16,22 @@
                             <b>Technical Contact</b>
                             <table>
                                 <tr>
-                                    <td class="width">Name</td>
+                                    <td class="width">Contact</td>
                                     <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.name"/></td>
                                 </tr>
-                                <tr>
+                                <tr t-if="doc.plane_id.technical_contact_id.phone">
                                     <td>Phone</td>
                                     <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.phone"/></td>
                                 </tr>
-                                <tr>
+                                <tr t-if="doc.plane_id.technical_contact_id.phone_company">
+                                    <td>Phone</td>
+                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.phone_company"/></td>
+                                </tr>
+                                <tr t-if="doc.plane_id.technical_contact_id.mobile">
+                                    <td>Phone</td>
+                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.mobile"/></td>
+                                </tr>
+                                <tr t-if="doc.plane_id.technical_contact_id.email">
                                     <td>E-Mail</td>
                                     <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.email"/></td>
                                 </tr>

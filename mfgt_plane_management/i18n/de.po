@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-12 08:20+0000\n"
-"PO-Revision-Date: 2017-05-12 08:20+0000\n"
+"POT-Creation-Date: 2017-06-07 12:07+0000\n"
+"PO-Revision-Date: 2017-06-07 12:07+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -71,6 +71,12 @@ msgstr "Kommerzielle Nutzung"
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Construction Year"
 msgstr "Baujahr"
+
+#. module: mfgt_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
+#: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
+msgid "Contact"
+msgstr "Kontakt"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_create_uid
@@ -208,10 +214,8 @@ msgstr "Minor Change Aproval"
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_mca_name
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_stc_name
-#: model:ir.ui.view,arch_db:mfgt_plane_management.report_invoice_document_plane_management
-#: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Name"
-msgstr "Bezeichnung"
+msgstr "Name"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_next_service
@@ -273,6 +277,11 @@ msgstr "Partner"
 #: model:ir.ui.view,arch_db:mfgt_plane_management.report_saleorder_document
 msgid "Phone"
 msgstr "Telefon"
+
+#. module: mfgt_plane_management
+#: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_technical_contact_phone_company
+msgid "Phone Company"
+msgstr "Telefon geschäftlich"
 
 #. module: mfgt_plane_management
 #: model:ir.model.fields,field_description:mfgt_plane_management.field_sale_order_plane_id
@@ -414,3 +423,8 @@ msgstr "mfgt.plane.mca"
 #: model:ir.model,name:mfgt_plane_management.model_mfgt_plane_stc
 msgid "mfgt.plane.stc"
 msgstr "mfgt.plane.stc"
+
+#. module: mfgt_plane_management
+#: model:ir.model.fields,field_description:mfgt_plane_management.field_mfgt_plane_management_technical_contact_mobile
+msgid "mobile"
+msgstr "Mobil"

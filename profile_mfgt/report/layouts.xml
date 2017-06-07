@@ -29,16 +29,16 @@
             <div class="header" style="font-size: 7pt;">
                 <div class="row">
                     <div class="col-xs-7">
-                        <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="width:290px; position:absolute;"/>
+                        <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % company.logo" style="width:290px; position:absolute; left:3px;"/>
                     </div>
-                    <div class="col-xs-5" style="padding-left:14mm;">
+                    <div class="col-xs-5" style="padding-left:13mm;">
                         <b><span t-field="company.partner_id.name"/></b><br/>
                         <span t-field="company.partner_id.street"/><br/>
                         <span t-field="company.partner_id.zip"/> <span t-field="company.partner_id.city"/><br/>
                         <span t-field="company.partner_id.country_id.name"/>
                     </div>
                 </div>
-                <div class="row" style="margin-top: 10px; padding-left:25mm;">
+                <div class="row" style="margin-top: 10px; padding-left:82px;">
                     <div class="col-xs-5 col-xs-offset-7">
                         <span t-field="company.phone"/> / <span t-field="company.email"/> / <span t-field="company.website"/><br/>
                         UID / MWSt.: CHE-109.029.890<br/>
