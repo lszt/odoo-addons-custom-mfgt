@@ -18,7 +18,8 @@ class MFGTMinorChangeApprovals(models.Model):
     description = fields.Char('Description', required=True)
 
 class MFGTPlaneManagement(models.Model):
-    _name='mfgt.plane.management'
+    _name = 'mfgt.plane.management'
+    _order = 'name asc'
 
     name = fields.Char('Plante Name', required=True)
     registration = fields.Char('Registration', required=True)
@@ -54,11 +55,13 @@ class MFGTPlaneManagement(models.Model):
     notes = fields.Text('Notes')
     partner_id = fields.Many2one('res.partner', string='Owner')
     owner_id = fields.Many2one('res.partner', string='Owner', required=True)
-    sale_ids = fields.Many2many('sale.order', 'plane_id', string='Sale Orders')
+    sale_ids = fields.One2many('sale.order', 'plane_id', string='Sale Orders')
     next_service = fields.Date('Next Service')
     next_service_type = fields.Char('Service Type')
 
     technical_contact_id = fields.Many2one('res.partner', string='Technical Contact')
     technical_contact_phone = fields.Char(related='technical_contact_id.phone', string='Phone')
+    technical_contact_phone_company = fields.Char(related='technical_contact_id.phone_company', string='Phone Company')
+    technical_contact_mobile = fields.Char(related='technical_contact_id.mobile', string='mobile')
     technical_contact_email = fields.Char(related='technical_contact_id.email', string='Email')
 

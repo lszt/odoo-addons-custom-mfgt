@@ -11,7 +11,7 @@
                                 <div class="col-xs-12">
                                     <div t-field="move.product_id.name"/>
                                     <div t-field="move.product_id.default_code"/>
-                                    <div t-field="move.location_dest_id"/>
+                                    <div t-field="move.location_dest_id.name"/>
                                     <div style="margin-top:5px;">
                                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', move.product_id.default_code, 1000, 200)" style="width:250px; height:25px;"/>
                                     </div>
@@ -24,7 +24,7 @@
                                         <div t-field="move.product_id.name"/>
                                         <div t-field="move.product_id.default_code"/>
                                         <div t-field="o.origin"/>
-                                        <div t-field="move.location_dest_id"/>
+                                        <div t-field="move.location_dest_id.name"/>
                                     </div>
                                     <div class="col-xs-5">
                                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', move.product_id.default_code, 2000, 2000)" style="width:80px;height:80px;"/>
@@ -45,7 +45,7 @@
                                 <div class="col-xs-12">
                                     <div t-field="pack_operation.product_id.name"/>
                                     <div t-field="pack_operation.product_id.default_code"/>
-                                    <div t-field="pack_operation.location_dest_id"/>
+                                    <div t-field="pack_operation.location_dest_id.name"/>
                                     <div style="margin-top:5px;">
                                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', pack_operation.product_id.default_code, 1000, 200)" style="width:250px; height:25px;"/>
                                     </div>
@@ -58,7 +58,7 @@
                                         <div t-field="pack_operation.product_id.name" style="white-space:nowrap; overflow:hidden;"/>
                                         <div t-field="pack_operation.product_id.default_code"/>
                                         <div t-field="o.origin"/>
-                                        <div t-field="pack_operation.location_dest_id" style="white-space:nowrap; overflow:hidden;"/>
+                                        <div t-field="pack_operation.location_dest_id.name" style="white-space:nowrap; overflow:hidden;"/>
                                     </div>
                                     <div class="col-xs-4" style="top:-5px; left:-15px;">
                                         <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', pack_operation.product_id.default_code, 2000, 2000)" style="width:100px; height:100px;"/>

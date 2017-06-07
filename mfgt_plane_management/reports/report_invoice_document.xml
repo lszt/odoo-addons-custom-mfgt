@@ -11,7 +11,7 @@
                             <b>Technical Contact</b>
                             <table>
                                 <tr>
-                                    <td class="width">Name</td>
+                                    <td class="width">Contact</td>
                                     <td class="border-left"><span t-field="o.sale_id.plane_id.technical_contact_id.name"/></td>
                                 </tr>
                                 <tr>

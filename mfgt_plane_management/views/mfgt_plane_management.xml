@@ -143,6 +143,8 @@
                                     <group string="Technical Contact">
                                         <field name="technical_contact_id"/>
                                         <field name="technical_contact_phone" readonly="1"/>
+                                        <field name="technical_contact_phone_company" readonly="1"/>
+                                        <field name="technical_contact_mobile" readonly="1"/>
                                         <field name="technical_contact_email" readonly="1"/>
                                     </group>
                                     <group string="Information">
