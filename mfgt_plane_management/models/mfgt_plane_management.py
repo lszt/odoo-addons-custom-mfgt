@@ -30,7 +30,7 @@ class MFGTPlaneManagement(models.Model):
     tcds_no = fields.Char('TCDS No.', required=True)
     legal_base = fields.Char('Legal Base', required=True)
     registration = fields.Char('Registration', required=True)
-    commercial_use = fields.Selection([('yes', 'Yes'), ('no', 'No')], string='Commercial Use', requred=True)
+    commercial_use = fields.Selection([('yes', 'Yes'), ('no', 'No')], string='Commercial Use', required=True)
     noise_level = fields.Char('Noise Level', required=True)
     noise_rate_class = fields.Char('Noise Rate Class', required=True)
     gasoline = fields.Char('Gasoline', required=True)

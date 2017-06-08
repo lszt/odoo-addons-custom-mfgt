@@ -4,7 +4,7 @@
 
         <template id="report_purchasequotation_document" inherit_id="purchase.report_purchasequotation_document">
             <xpath expr="//div[@class='page']" position="replace">
-                <div class="page">
+                <div class="page" style="margin-left:80px;">
                     <div class="oe_structure"/>
 
                     <div class="row mt32 mb32">

@@ -1,19 +1,30 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* profile_mfgt
+#   * profile_mfgt
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-24 16:36+0000\n"
-"PO-Revision-Date: 2017-04-24 16:36+0000\n"
+"POT-Creation-Date: 2017-06-08 11:51+0000\n"
+"PO-Revision-Date: 2017-06-08 11:51+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
+
+#. module: profile_mfgt
+#: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
+msgid "&lt;/tbody&gt;\n"
+"                                        &lt;/table&gt;\n"
+"                                        &lt;p style=\"page-break-before:always;\"&gt; &lt;/p&gt;\n"
+"                                        &lt;table class=\"table table-condensed\"&gt;"
+msgstr "&lt;/tbody&gt;\n"
+"                                        &lt;/table&gt;\n"
+"                                        &lt;p style=\"page-break-before:always;\"&gt; &lt;/p&gt;\n"
+"                                        &lt;table class=\"table table-condensed\"&gt;"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
@@ -27,6 +38,7 @@ msgstr "&lt;/tbody&gt;\n"
 "                                &lt;table class=\"table table-condensed\"&gt;"
 
 #. module: profile_mfgt
+#: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
 #: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
 msgid "&lt;tbody&gt;"
 msgstr "&lt;tbody&gt;"
@@ -145,7 +157,7 @@ msgstr "<strong>Referenz:</strong>"
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchasequotation_document
 msgid "<strong>Shipping address:</strong>"
-msgstr "Lieferadresse"
+msgstr "<strong>Lieferanschrift:</strong>"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
@@ -153,15 +165,22 @@ msgid "<strong>Subtotal</strong>"
 msgstr "<strong>Zwischensumme</strong>"
 
 #. module: profile_mfgt
+#: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
+msgid "<strong>Taxes</strong>"
+msgstr "<strong>Steuern</strong>"
+
+#. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
+#: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
 msgid "<strong>Total Without Taxes</strong>"
-msgstr "Total ohne Steuer"
+msgstr "<strong>Total ohne Steuer</strong>"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
+#: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
 msgid "<strong>Total</strong>"
-msgstr "Total"
+msgstr "<strong>Total</strong>"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
@@ -196,7 +215,6 @@ msgstr "Beschreibung"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
-#: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
 msgid "Disc.(%)"
 msgstr "Rabatt (%)"
 
@@ -209,6 +227,11 @@ msgstr "Entwurf Rechnung"
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
 msgid "Invoice"
 msgstr "Rechnung"
+
+#. module: profile_mfgt
+#: model:ir.model,name:profile_mfgt.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Rechungsposition"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
@@ -252,12 +275,17 @@ msgstr "Gutschrift"
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchasequotation_document
 msgid "Request for Quotation"
-msgstr "Angebotsanfrage"
+msgstr "Anfrage eines Angebots"
+
+#. module: profile_mfgt
+#: model:ir.model,name:profile_mfgt.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Auftragsposition"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
 msgid "TIN:"
-msgstr "MwSt-Nr."
+msgstr "USt-ID-Nr."
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
@@ -281,7 +309,7 @@ msgstr "Stückpreis"
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchasequotation_document
 msgid "VAT:"
-msgstr "MwSt"
+msgstr "USt."
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_invoice_document
@@ -294,7 +322,18 @@ msgid "Vendor Refund"
 msgstr "Lieferantengutschrift"
 
 #. module: profile_mfgt
+#: code:addons/profile_mfgt/model/account_invoice.py:24
+#, python-format
+msgid "Warning!"
+msgstr "Warning!"
+
+#. module: profile_mfgt
+#: code:addons/profile_mfgt/model/account_invoice.py:25
+#, python-format
+msgid "You must first select a partner!"
+msgstr "You must first select a partner!"
+
+#. module: profile_mfgt
 #: model:ir.model,name:profile_mfgt.model_ir_qweb_field_datetime
 msgid "ir.qweb.field.datetime"
 msgstr "ir.qweb.field.datetime"
-

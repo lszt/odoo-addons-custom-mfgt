@@ -25,6 +25,7 @@
         'report/report_invoice.xml',
         'data/report_paperformat.xml',
         'report/product_label.xml',
+        'views/sale_order.xml',
     ],
     'installable': True,
     'application': False,
