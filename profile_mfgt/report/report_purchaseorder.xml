@@ -4,9 +4,9 @@
 
         <template id="report_purchaseorder_document" inherit_id="purchase.report_purchaseorder_document">
             <xpath expr="//div[@class='page']" position="replace">
-                <div class="page">
+                <div class="page" style="margin-left:80px;">
                     <div class="oe_structure"/>
-                    <div class="row">
+                    <div class="row mt32 mb32">
                         <div class="col-xs-6">
                             <div t-field="o.partner_id"
                                 t-field-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true, "phone_icons": true}'/>
@@ -18,7 +18,7 @@
                                 <div t-field="o.dest_address_id"
                                     t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true,}'/>
                                 <div>
-                                    <span class="fa fa-phone"> +41 52 366 33 34</span><br/>
+                                    <span class="fa fa-phone"> +41 52 366 33 41</span><br/>
                                     <span class="fa fa-fax"> +41 52 366 33 42</span><br/>
                                     <span>maintenance@mfgt.ch</span>
                                 </div>
@@ -29,7 +29,7 @@
                                 <div t-field="o.picking_type_id.warehouse_id.partner_id"
                                     t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
                                 <div>
-                                    <span class="fa fa-phone"> +41 52 366 33 34</span><br/>
+                                    <span class="fa fa-phone"> +41 52 366 33 41</span><br/>
                                     <span class="fa fa-fax"> +41 52 366 33 42</span><br/>
                                     <span>maintenance@mfgt.ch</span>
                                 </div>

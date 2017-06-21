@@ -7,13 +7,13 @@
                 <div class="page" style="font-size:14px; padding:5px !important; margin-left:-15px !important; line-height:16px;">
                     <t t-if="not o.pack_operation_ids">
                         <t t-foreach="o.move_lines" t-as="move">
-                            <div class="row" style="padding:10px 0 0 10px;">
-                                <div class="col-xs-12">
+                            <div class="row" style="padding:0 10px;">
+                                <div class="col-xs-8 mt16">
                                     <div t-field="move.product_id.name"/>
                                     <div t-field="move.product_id.default_code"/>
                                     <div t-field="move.location_dest_id.name"/>
-                                    <div style="margin-top:5px;">
-                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', move.product_id.default_code, 1000, 200)" style="width:250px; height:25px;"/>
+                                    <div class="col-xs-4">
+                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', move.product_id.default_code, 2000, 2000)" style="width:80px;height:80px;"/>
                                     </div>
                                 </div>
                             </div>
@@ -41,17 +41,18 @@
                     </t>
                     <t t-if="o.pack_operation_ids">
                         <t t-foreach="o.pack_operation_ids" t-as="pack_operation">
-                            <div class="row" style="padding:10px 0 0 10px;">
-                                <div class="col-xs-12">
-                                    <div t-field="pack_operation.product_id.name"/>
+                            <div class="row mt16" style="padding:0 10px;">
+                                <div class="col-xs-8">
+                                    <div t-field="pack_operation.product_id.name" style="white-space:nowrap; overflow:hidden;"/>
                                     <div t-field="pack_operation.product_id.default_code"/>
-                                    <div t-field="pack_operation.location_dest_id.name"/>
-                                    <div style="margin-top:5px;">
-                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', pack_operation.product_id.default_code, 1000, 200)" style="width:250px; height:25px;"/>
-                                    </div>
+                                    <div t-field="o.origin"/>
+                                    <div t-field="pack_operation.location_dest_id.name" style="white-space:nowrap; overflow:hidden;"/>
+                                </div>
+                                <div class="col-xs-4" style="top:-5px; left:-15px;">
+                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', pack_operation.product_id.default_code, 2000, 2000)" style="width:100px; height:100px;"/>
                                 </div>
                             </div>
-                            <p style="page-break-after:always;"/>
+                            <p style="page-beak-after:always;"/>
                             <div t-foreach="range(1, int(pack_operation.product_qty + 1))" t-as="r">
                                 <div class="row mt16" style="padding:0 10px;">
                                     <div class="col-xs-8">

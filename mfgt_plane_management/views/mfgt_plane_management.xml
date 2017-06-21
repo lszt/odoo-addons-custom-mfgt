@@ -8,6 +8,18 @@
             name="Plane Mangement"
             groups="base.group_sale_manager,base.group_sale_salesman"/>
 
+        <menuitem
+            id="menu_mfgt_plane_management_control"
+            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            name="Mangement"
+            groups="base.group_sale_manager,base.group_sale_salesman"/>
+
+        <menuitem
+            id="menu_mfgt_plane_management_settings"
+            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            name="Settings"
+            groups="base.group_sale_manager,base.group_sale_salesman"/>
+
         <record id="mfgt_plane_stc_tree_view" model="ir.ui.view">
             <field name="name">mfgt.plane.stc.tree.view</field>
             <field name="model">mfgt.plane.stc</field>
@@ -49,7 +61,7 @@
         <menuitem
             id="menu_mfgt_planes_stc"
             action="action_plane_stc"
-            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            parent="mfgt_plane_management.menu_mfgt_plane_management_settings"
             name="Supplement Type Certificates"
             sequence="20"
             groups="base.group_sale_manager,base.group_sale_salesman"/>
@@ -95,7 +107,7 @@
         <menuitem
             id="menu_mfgt_planes_mca"
             action="action_plane_mca"
-            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            parent="mfgt_plane_management.menu_mfgt_plane_management_settings"
             name="Minor Change Approvals"
             sequence="30"
             groups="base.group_sale_manager,base.group_sale_salesman"/>
@@ -227,7 +239,7 @@
         <menuitem
             id="menu_mfgt_planes"
             action="action_plane_management"
-            parent="mfgt_plane_management.menu_mfgt_plane_management"
+            parent="mfgt_plane_management.menu_mfgt_plane_management_control"
             name="Planes"
             sequence="10"
             groups="base.group_sale_manager,base.group_sale_salesman"/>
