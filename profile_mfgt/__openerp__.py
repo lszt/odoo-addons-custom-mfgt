@@ -15,6 +15,7 @@
         'sale',
         'purchase',
         'crm',
+        'stock',
     ],
     'data': [
         'report/layouts.xml',
@@ -26,6 +27,8 @@
         'data/report_paperformat.xml',
         'report/product_label.xml',
         'views/sale_order.xml',
+        'views/stock.xml',
+        'report/report_deliveryslip.xml',
     ],
     'installable': True,
     'application': False,

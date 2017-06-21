@@ -26,11 +26,12 @@
                     <div class="mfgt-company-city-date-line col-xs-5 col-xs-offset-7">
                         <span t-field="o.company_id.city"/>,
                         <span t-field="o.date_invoice"/>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'" t-esc="time.strftime('%d.%m.%Y',time.strptime(o.create_date,'%Y-%m-%d %H:%M:%S'))"/>
                     </div>
 
                     <h2>
                         <span t-if="o.type == 'out_invoice' and (o.state == 'open' or o.state == 'paid')">Invoice</span>
-                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA</span>
+                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'">PRO-FORMA Rechnung</span>
                         <span t-if="o.type == 'out_invoice' and o.state == 'draft'">Draft Invoice</span>
                         <span t-if="o.type == 'out_invoice' and o.state == 'cancel'">Cancelled Invoice</span>
                         <span t-if="o.type == 'out_refund'">Refund</span>
