@@ -12,6 +12,7 @@ Fixed the problem to change an product unit after it has been already used in an
     'depends' : [
         'account',
         'product',
+        'stock',
     ],
     'data': [
     ],
