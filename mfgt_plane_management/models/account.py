@@ -8,6 +8,7 @@ class AccountInvoice(models.Model):
     _inherit = 'account.invoice'
 
     sale_id = fields.Many2one('sale.order', compute='_select_sale_order', string='Sale Order', store=True)
+    plane_id = fields.Many2one('mfgt.plane.management', string='Plane', readonly=True, states={'draft': [('readonly', False)]})
 
     @api.depends('origin')
     @api.multi
