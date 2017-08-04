@@ -10,6 +10,11 @@
                 <xpath expr="//field[@name='origin']" position="after">
                     <field name="sale_id"/>
                 </xpath>
+                <xpath expr="//notebook" position="before">
+                    <group>
+                        <field name="plane_id" attrs="{'invisible': [('sale_id', '!=', '')]}"/>
+                    </group>
+                </xpath>
             </field>
         </record>
 
