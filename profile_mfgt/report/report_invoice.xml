@@ -26,7 +26,6 @@
                     <div class="mfgt-company-city-date-line col-xs-5 col-xs-offset-7">
                         <span t-field="o.company_id.city"/>,
                         <span t-field="o.date_invoice"/>
-                        <span t-if="o.type == 'out_invoice' and o.state == 'proforma2'" t-esc="time.strftime('%d.%m.%Y',time.strptime(o.create_date,'%Y-%m-%d %H:%M:%S'))"/>
                     </div>
 
                     <h2>
@@ -81,7 +80,32 @@
                         <tbody>
                             <t t-foreach="o.sale_layout_lines(invoice_id=o.id)" t-as="p">
                                 <!-- Name of the category -->
-                                <t t-call="sale_layout.category_template"/>
+                                <t t-if="p['category']">
+                                    <t t-if="not display_discount">
+                                        <tr class="active">
+                                            <td colspan="6" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
+                                                <t t-if="p['category'].name">
+                                                    <t t-esc="p['category'].name"></t>
+                                                </t>
+                                                <t t-if="not p['category'].name">
+                                                    Uncategorized
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <t t-if="display_discount">
+                                        <tr class="active">
+                                            <td colspan="7" style="font-weight: bold; border-bottom: 1px solid black;">&amp;bull;
+                                                <t t-if="p['category'].name">
+                                                    <t t-esc="p['category'].name"></t>
+                                                </t>
+                                                <t t-if="not p['category'].name">
+                                                    Uncategorized
+                                                </t>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
 
                                 <!-- Lines associated -->
                                 <t t-foreach="p['lines']" t-as="l">
@@ -113,12 +137,38 @@
                                 </t>
 
                                 <!-- Subtotal -->
-                                <t t-call="sale_layout.subtotal_template">
-                                    <t t-set="doc" t-value="o"/>
+                                <t t-if="'subtotal' in p['category'] and p['category'].subtotal is True">
+                                    <tr class="text-right">
+                                        <t t-if="not display_discount">
+                                            <td colspan="6">
+                                                <strong>Subtotal: </strong>
+                                                <span t-esc="p['subtotal']" t-esc-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                            </td>
+                                        </t>
+                                        <t t-if="display_discount">
+                                            <td colspan="7">
+                                                <strong>Subtotal: </strong>
+                                                <span t-esc="p['subtotal']" t-esc-options='{"widget": "monetary", "display_currency": "o.currency_id"}'/>
+                                            </td>
+                                        </t>
+                                    </tr>
                                 </t>
 
                                 <!-- Separator -->
-                                <t t-call="sale_layout.separator_template"/>
+                                <t t-if="'separator' in p['category'] and p['category'].separator is True">
+                                    <tr class="text-center">
+                                        <t t-if="not display_discount">
+                                            <td colspan="6">
+                                                ***
+                                            </td>
+                                        </t>
+                                        <t t-if="not display_discount">
+                                            <td colspan="7">
+                                                ***
+                                            </td>
+                                        </t>
+                                    </tr>
+                                </t>
 
                                 <!-- Pagebreak -->
                                 <t t-if="'pagebreak' in p['category'] and p['category'].pagebreak is True">
@@ -204,7 +254,6 @@
                     </div>
 
                     <p t-if="o.comment">
-                        <strong>Comment:</strong>
                         <span t-field="o.comment"/>
                     </p>
                     <p t-if="o.payment_term_id">

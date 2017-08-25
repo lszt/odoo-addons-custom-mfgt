@@ -7,7 +7,7 @@
                 <div class="page" style="font-size:14px; padding:5px !important; margin-left:-15px !important; line-height:16px;">
                     <t t-if="not o.pack_operation_ids">
                         <t t-foreach="o.move_lines" t-as="move">
-                            <div class="row" style="padding:0 10px;">
+                            <div class="row" style="padding:0px;">
                                 <div class="col-xs-8 mt16">
                                     <div t-field="move.product_id.name"/>
                                     <div t-field="move.product_id.default_code"/>
@@ -41,11 +41,10 @@
                     </t>
                     <t t-if="o.pack_operation_ids">
                         <t t-foreach="o.pack_operation_ids" t-as="pack_operation">
-                            <div class="row mt16" style="padding:0 10px;">
+                            <div class="row mt16" style="padding:0px;">
                                 <div class="col-xs-8">
                                     <div t-field="pack_operation.product_id.name" style="white-space:nowrap; overflow:hidden;"/>
                                     <div t-field="pack_operation.product_id.default_code"/>
-                                    <div t-field="o.origin"/>
                                     <div t-field="pack_operation.location_dest_id.name" style="white-space:nowrap; overflow:hidden;"/>
                                 </div>
                                 <div class="col-xs-4" style="top:-5px; left:-15px;">
