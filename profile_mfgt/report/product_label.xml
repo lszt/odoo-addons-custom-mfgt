@@ -3,6 +3,102 @@
     <data>
 
         <template id="mfgt_product_label_document">
+            <html t-att-lang="lang and lang.replace('_', '-')"
+                  t-att-data-editable="'1' if editable else None"
+                  t-att-data-translatable="'1' if translatable else None"
+                  t-att-data-edit_translations="'1' if edit_translations else None"
+                  t-att-data-main-object="repr(main_object) if editable else None"
+                  t-att-data-report-margin-top="data_report_margin_top"
+                  t-att-data-report-header-spacing="data_report_header_spacing"
+                  t-att-data-report-dpi="data_report_dpi">
+                <head>
+                    <meta charset="utf-8" />
+                    <meta name="viewport" content="initial-scale=1"/>
+                    <title><t t-esc="title or 'Odoo Report'"/></title>
+                    <t t-call-assets="report.assets_common"/>
+                    <t t-if="editable">
+                        <t t-call-assets="web_editor.assets_editor"/>
+                        <t t-call-assets="report.assets_editor"/>
+                    </t>
+                </head>
+                <body>
+                    <div id="wrapwrap">
+                        <main>
+                            <div class="page" style="margin:0 !important; padding:0 !important;">
+                                <t t-if="not o.pack_operation_ids">
+                                    <t t-foreach="o.move_lines" t-as="move">
+                                        <div class="row" style="margin:0 !important; padding:5px 0 0 0 !important; height:29mm !important;">
+                                            <div class="col-xs-8" style="margin:0 !important; padding:0 !important;">
+                                                <div t-field="move.product_id.name"/>
+                                                <div t-field="move.product_id.default_code"/>
+                                                <div t-field="move.location_dest_id.name"/>
+                                            </div>
+                                            <div class="col-xs-4" style="margin:0 !important; padding:0 !important;">
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', move.product_id.default_code, 2000, 2000)" style="width:80px;height:80px;"/>
+                                            </div>
+                                        </div>
+                                        <p style="page-break-after:always;"/>
+                                        <t t-foreach="range(1, int(move.product_qty + 1))" t-as="r">
+                                            <div class="row" style="margin:0 !important; padding:5px 0 0 0 !important;">
+                                                <div class="col-xs-8" style="margin:0 !important; padding:0 !important; height:29mm !important;">
+                                                    <div t-field="move.product_id.name"/>
+                                                    <div t-field="move.product_id.default_code"/>
+                                                    <div t-field="o.origin"/>
+                                                    <div t-field="move.location_dest_id.name"/>
+                                                </div>
+                                                <div class="col-xs-4" style="margin:0 !important; padding:0 !important;">
+                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', move.product_id.default_code, 2000, 2000)" style="width:80px;height:80px;"/>
+                                                </div>
+                                                <div class="col-xs-12" style="margin:0 !important; padding:0 !important;">
+                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.origin, 2000, 200)" style="width:250px; height:25px;"/>
+                                                </div>
+                                            </div>
+                                            <p style="page-beak-after:always;"/>
+                                        </t>
+                                    </t>
+                                </t>
+                                <t t-if="o.pack_operation_ids">
+                                    <t t-foreach="o.pack_operation_ids" t-as="pack_operation">
+                                        <div class="row" style="margin:0 !important; padding:5px 0 0 0 !important; height:29mm !important;">
+                                            <div class="col-xs-8" style="margin:0 !important; padding:0 !important;">
+                                                <div t-field="pack_operation.product_id.name" style="white-space:nowrap; overflow:hidden;"/>
+                                                <div t-field="pack_operation.product_id.default_code"/>
+                                                <div t-field="pack_operation.location_dest_id.name" style="white-space:nowrap; overflow:hidden;"/>
+                                            </div>
+                                            <div class="col-xs-4" style="margin:0 !important; padding:0 !important;">
+                                                <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', pack_operation.product_id.default_code, 2000, 2000)" style="width:80px; height:80px;"/>
+                                            </div>
+                                        </div>
+                                        <p style="page-beak-after:always;"/>
+                                        <t t-foreach="range(1, int(pack_operation.product_qty + 1))" t-as="r">
+                                            <div class="row" style="margin:0 !important; padding:5px 0 0 0 !important; height:29mm !important;">
+                                                <div class="col-xs-8" style="margin:0 !important; padding:0 !important;">
+                                                    <div t-field="pack_operation.product_id.name" style="white-space:nowrap; overflow:hidden;"/>
+                                                    <div t-field="pack_operation.product_id.default_code"/>
+                                                    <div t-field="o.origin"/>
+                                                    <div t-field="pack_operation.location_dest_id.name" style="white-space:nowrap; overflow:hidden;"/>
+                                                </div>
+                                                <div class="col-xs-4" style="margin:0 !important; padding:0 !important;">
+                                                    <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR', pack_operation.product_id.default_code, 2000, 2000)" style="width:80px; height:80px;"/>
+                                                </div>
+                                                <div class="col-xs-12" style="margin:0 !important; padding:0 !important;">
+                                                    <div>
+                                                        <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.origin, 2000, 200)" style="width:250px; height:25px;"/>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p style="page-beak-after:always;"/>
+                                        </t>
+                                    </t>
+                                </t>
+                            </div>
+                        </main>
+                    </div>
+                </body>
+            </html>
+        </template>
+
+        <!--template id="mfgt_product_label_document">
             <t t-call="report.html_container">
                 <div class="page" style="font-size:14px; padding:5px !important; margin-left:-15px !important; line-height:16px;">
                     <t t-if="not o.pack_operation_ids">
@@ -75,7 +171,7 @@
                     </t>
                 </div>
             </t>
-        </template>
+        </template-->
 
         <template id="mfgt_product_label">
             <t t-foreach="docs" t-as="o">
