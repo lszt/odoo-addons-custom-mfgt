@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 9.0e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-06-21 13:53+0000\n"
-"PO-Revision-Date: 2017-06-21 13:53+0000\n"
+"POT-Creation-Date: 2017-06-21 13:59+0000\n"
+"PO-Revision-Date: 2017-06-21 13:59+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -199,7 +199,7 @@ msgstr "Total ohne Steuer"
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
 #: model:ir.ui.view,arch_db:profile_mfgt.report_saleorder_document
 msgid "<strong>Total</strong>"
-msgstr "<strong>Total</strong>"
+msgstr "Total"
 
 #. module: profile_mfgt
 #: model:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
