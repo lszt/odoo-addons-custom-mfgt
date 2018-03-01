@@ -26,6 +26,7 @@
         'report/report_invoice.xml',
         'data/report_paperformat.xml',
         'data/account_tags.xml',
+        'data/account_financial_report.xml',
         'report/product_label.xml',
         'views/sale_order.xml',
         'views/stock.xml',
