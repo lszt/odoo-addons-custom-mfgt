@@ -1,0 +1,254 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="account_tag_mfgt_1500" model="account.account.tag">
+            <field name="name">1500 Flugzeuge</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1510" model="account.account.tag">
+            <field name="name">1510 Maschinen, Mobilien, Werkzeuge</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1600" model="account.account.tag">
+            <field name="name">1600 Tankstelle</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1601" model="account.account.tag">
+            <field name="name">1601 Clubhaus</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1602" model="account.account.tag">
+            <field name="name">1602 Hangar</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1603" model="account.account.tag">
+            <field name="name">1603 Werft</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1604" model="account.account.tag">
+            <field name="name">1604 Spielplatz</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_1606" model="account.account.tag">
+            <field name="name">1606 Grundsücke</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2500" model="account.account.tag">
+            <field name="name">2500 Kautionen Mitglieder</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2510" model="account.account.tag">
+            <field name="name">2510 Depots Hangarmieter</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2550" model="account.account.tag">
+            <field name="name">2550 Anteilscheine</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2580" model="account.account.tag">
+            <field name="name">2580 Übrige langfr. Verbindlichkeiten (unverzinslich)</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2600" model="account.account.tag">
+            <field name="name">2600 Rückstellungen Flugzeugbeschaffung</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2610" model="account.account.tag">
+            <field name="name">2610 Rückstellungen Revision Flugzeuge</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2620" model="account.account.tag">
+            <field name="name">2620 Rückstellungen Kaskofälle</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2630" model="account.account.tag">
+            <field name="name">2630 Rückstellungen Rechtskosten</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2640" model="account.account.tag">
+            <field name="name">2640 Rückstellungen Umweltschutz</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_2650" model="account.account.tag">
+            <field name="name">2650 Rückstellungen Veranstaltungen/Jubiläum</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_280" model="account.account.tag">
+            <field name="name">280 Eigenkapital/Vereinsvermögen</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_282" model="account.account.tag">
+            <field name="name">282 Zweckgebundene Spende Model AG</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_289" model="account.account.tag">
+            <field name="name">289 Jahresgewinn</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_300" model="account.account.tag">
+            <field name="name">300 Mitgliederbeiträge</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_301" model="account.account.tag">
+            <field name="name">301 Gönnerbeiträge</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_310" model="account.account.tag">
+            <field name="name">310 Charter und Schulung</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_320" model="account.account.tag">
+            <field name="name">320 Hangarmieten, Abstellplätze</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_330" model="account.account.tag">
+            <field name="name">330 Werft</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_340" model="account.account.tag">
+            <field name="name">340 Treibstoffe, Öle</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_350" model="account.account.tag">
+            <field name="name">350 Diverses</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_500" model="account.account.tag">
+            <field name="name">500 Löhne</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_570" model="account.account.tag">
+            <field name="name">570 Sozialversicherungsaufwand</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_580" model="account.account.tag">
+            <field name="name">580 Übriger Personalaufwand</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_590" model="account.account.tag">
+            <field name="name">590 Leistungen Dritter</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_640" model="account.account.tag">
+            <field name="name">640 Gebäudeunterhalt, Energie, Wasser, Raummiete</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_645" model="account.account.tag">
+            <field name="name">645 Versicherungen, Gebühren</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_650" model="account.account.tag">
+            <field name="name">650 Kurse, Schulung SPHAIR</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_660" model="account.account.tag">
+            <field name="name">660 Drucksachen, Büromaterial, Tel., Porti, IT</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_670" model="account.account.tag">
+            <field name="name">670 Div. Verwaltungsaufwand</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_680" model="account.account.tag">
+            <field name="name">680 Flugzeuge</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_684" model="account.account.tag">
+            <field name="name">684 Werft</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_686" model="account.account.tag">
+            <field name="name">686 Hangar</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_687" model="account.account.tag">
+            <field name="name">687 Clubhaus</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_688" model="account.account.tag">
+            <field name="name">688 Tankstelle, Mobilien, Einrichtungen</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_689" model="account.account.tag">
+            <field name="name">689 Grundstücke</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_690" model="account.account.tag">
+            <field name="name">690 Finanzaufwand</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_695" model="account.account.tag">
+            <field name="name">695 Finanzertrag</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_700" model="account.account.tag">
+            <field name="name">700 Betrieblicher Nebenerfolg</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_800" model="account.account.tag">
+            <field name="name">800 Betriebsfremder Aufwand</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_810" model="account.account.tag">
+            <field name="name">810 Betriebsfremder Ertrag</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_850" model="account.account.tag">
+            <field name="name">850 a.o. Aufwand</field>
+            <field name="applicability">accounts</field>
+        </record>
+
+        <record id="account_tag_mfgt_851" model="account.account.tag">
+            <field name="name">851 a.o. Ertrag</field>
+            <field name="applicability">accounts</field>
+        </record>
+    </data>
+</odoo>
