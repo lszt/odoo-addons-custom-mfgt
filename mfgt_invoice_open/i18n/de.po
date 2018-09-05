@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#   * mfgt_invoice_open
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-09-05 16:45+0000\n"
+"PO-Revision-Date: 2018-09-05 16:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mfgt_invoice_open
+#: model:ir.model,name:mfgt_invoice_open.model_account_invoice
+msgid "Invoice"
+msgstr "Rechnung"
+
+#. module: mfgt_invoice_open
+#: model:ir.model.fields,field_description:mfgt_invoice_open.field_account_invoice_invoice_zero
+msgid "Is Invoice with amout Zero"
+msgstr "Ist Rechnung mit Gesamtbetrag Null"
+
+#. module: mfgt_invoice_open
+#: model:ir.ui.view,arch_db:mfgt_invoice_open.mfgt_invoice_open_view
+msgid "Set Open"
+msgstr "Auf Offen setzen"
