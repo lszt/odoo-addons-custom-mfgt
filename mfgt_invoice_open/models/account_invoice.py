@@ -19,4 +19,4 @@ class AccountInvoice(models.Model):
     def set_state_open(self):
         for rec in self:
             if rec.invoice_zero:
-                rec.write({'state': 'open'})
+                rec.action_cancel()
