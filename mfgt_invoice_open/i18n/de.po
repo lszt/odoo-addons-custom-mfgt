@@ -27,5 +27,5 @@ msgstr "Ist Rechnung mit Gesamtbetrag Null"
 
 #. module: mfgt_invoice_open
 #: model:ir.ui.view,arch_db:mfgt_invoice_open.mfgt_invoice_open_view
-msgid "Set Open"
-msgstr "Auf Offen setzen"
+msgid "Cancel Invoice"
+msgstr "Rechnung abbrechen"
