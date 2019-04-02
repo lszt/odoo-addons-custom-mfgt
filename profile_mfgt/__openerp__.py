@@ -4,9 +4,9 @@
 {
     'name': 'Profile MFGT Online Team',
     'version': '9.0.0.1.2',
-    'author': 'Hucke Media GmbH & Co. KG/IFE GmbH',
+    'author': 'Motorfluggruppe Thurgau MFGT',
     'category': 'Custom',
-    'website': 'https://www.hucke-media.de/',
+    'website': 'https://www.mfgt.ch/',
     'licence': 'AGPL-3',
     'summary': 'Customizations for MFGT',
     'depends': [
@@ -16,6 +16,11 @@
         'purchase',
         'crm',
         'stock',
+	'l10n_ch',
+	'l10n_ch_reports',
+	'mfgt_partner_additions',
+	'mfgt_product_sale_section',
+	'mfgt_invoice_open',
     ],
     'data': [
         'report/layouts.xml',
