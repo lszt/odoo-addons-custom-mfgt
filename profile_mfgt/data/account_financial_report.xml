@@ -11,7 +11,7 @@
         <field name="code">CHTAX_299</field>
         <field name="sequence" eval="1"/>
         <field name="level" eval="1"/>
-        <field name="formulas">balance = CHTAX_200.balance - CHTAX_289.balance</field>
+        <field name="formulas">balance = CHTAX_200.balance + CHTAX_289.balance</field>
         <field name="special_date_changer">strict_range</field>
         <field name="financial_report_id" ref="financial_report_l10n_ch_mfgt"/>
     </record>
@@ -38,7 +38,7 @@
         <field name="special_date_changer">strict_range</field>
     </record>
     <record id="financial_report_line_chtax_302a" model="account.financial.html.report.line">
-        <field name="name">302a Chiffre d'affaires imposable a 7.7% (TS)</field>
+        <field name="name">302a Zu versteuernder Umsatz bei 7.7%</field>
         <field name="code">CHTAX_302a</field>
         <field name="sequence" eval="4"/>
         <field name="level" eval="3"/>
@@ -49,7 +49,7 @@
         <field name="special_date_changer">strict_range</field>
     </record>
     <record id="financial_report_line_chtax_311a" model="account.financial.html.report.line">
-        <field name="name">311a Chiffre d'affaires imposable a 2.5% (TR)</field>
+        <field name="name">312a Zu versteuernder Umsatz bei 2.5% (Reduziert)</field>
         <field name="code">CHTAX_311a</field>
         <field name="sequence" eval="2"/>
         <field name="level" eval="3"/>
@@ -72,7 +72,7 @@
         <field name="special_date_changer">strict_range</field>
     </record>
     <record id="financial_report_line_chtax_342a" model="account.financial.html.report.line">
-        <field name="name">342a Chiffre d'affaires imposable a 3.7% (TS)</field>
+        <field name="name">342a Zu versteuernder Umsatz bei 3.7% (Beherbergung)</field>
         <field name="code">CHTAX_342a</field>
         <field name="sequence" eval="3"/>
         <field name="level" eval="3"/>
@@ -83,12 +83,12 @@
         <field name="special_date_changer">strict_range</field>
     </record>
     <record id="financial_report_line_chtax_381a" model="account.financial.html.report.line">
-        <field name="name">381a Impots sur les acquisitions</field>
+        <field name="name">381a Zu versteuernder Umsatz Bezugsteuer</field>
         <field name="code">CHTAX_381a</field>
         <field name="sequence" eval="3"/>
         <field name="level" eval="3"/>
         <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.vat_tag_381_a')])]"/>
-        <field name="formulas">balance = - sum.balance</field>
+        <field name="formulas">balance = sum.balance</field>
         <field name="parent_id" ref="financial_report_line_chtax_200"/>
         <field name="show_domain">never</field>
         <field name="special_date_changer">strict_range</field>
@@ -241,7 +241,7 @@
         <field name="sequence" eval="4"/>
         <field name="level" eval="2"/>
         <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.vat_tag_381_b')])]"/>
-        <field name="formulas">balance = - sum.balance</field>
+        <field name="formulas">balance = sum.balance</field>
         <field name="parent_id" ref="financial_report_line_chtax_399"/>
         <field name="show_domain">never</field>
         <field name="special_date_changer">strict_range</field>
