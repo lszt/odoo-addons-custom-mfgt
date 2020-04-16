@@ -3,7 +3,7 @@
 
 {
     'name' : 'MFGT Sale Section in Product-Category',
-    'version': '9.0.1.0',
+    'version': '12.0.1.0',
     'website' : 'http://ife.de',
     'category': 'Hidden/Dependency',
     'depends' : [

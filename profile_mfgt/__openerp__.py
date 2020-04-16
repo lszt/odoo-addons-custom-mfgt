@@ -2,7 +2,7 @@
 # This file is part of Odoo. The COPYRIGHT file at the top level of
 # this module contains the full copyright notices and license terms.
 {
-    'name': 'Profile MFGT Online Team',
+    'name': 'Profile MFGT - Motorfluggruppe Thurgau',
     'version': '12.0.0.1.2',
     'author': 'Motorfluggruppe Thurgau MFGT',
     'category': 'Custom',

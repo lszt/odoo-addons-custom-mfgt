@@ -3,7 +3,7 @@
 
 {
     'name' : 'MFGT Partner Enhancement',
-    'version': '9.0.1.0',
+    'version': '12.0.1.0',
     'website' : 'http://syscoon.com',
     'category': 'Sales',
     'description': """
