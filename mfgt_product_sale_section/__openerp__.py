@@ -6,7 +6,10 @@
     'version': '9.0.1.0',
     'website' : 'http://ife.de',
     'category': 'Hidden/Dependency',
-    'depends' : [],
+    'depends' : [
+            'account',
+            'stock',
+            ],
     'description': """
 Adds Sale Section in Product-Category which applies automatically in the sale order line.
     """,
