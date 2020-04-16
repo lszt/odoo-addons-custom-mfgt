@@ -12,6 +12,7 @@
     'depends': [
         'account',
         'account_accountant',
+        'sale',
         'sale_management',
         'purchase',
         'crm',
