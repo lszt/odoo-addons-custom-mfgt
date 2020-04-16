@@ -7,7 +7,7 @@
     'website' : 'http://ife.de',
     'category': 'Hidden/Dependency',
     'depends' : [
-            'account',
+            'sale',
             'stock',
             ],
     'description': """
