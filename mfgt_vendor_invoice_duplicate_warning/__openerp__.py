@@ -3,7 +3,7 @@
 
 {
     'name' : 'MFGT Vendor Invoice Reference Warning',
-    'version': '9.0.1.0',
+    'version': '12.0.1.0',
     'website' : 'http://syscoon.com',
     'category': 'Accounting',
     'description': """
