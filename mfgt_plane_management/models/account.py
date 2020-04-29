@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
-from openerp import models, fields, api
+from odoo import models, fields, api
 
 
 class AccountInvoice(models.Model):
@@ -18,4 +18,3 @@ class AccountInvoice(models.Model):
                 sale_order = self.env['sale.order'].search([('name', '=', rec.origin)])
                 if sale_order:
                     rec.sale_id = sale_order[0].id
-        return

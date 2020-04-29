@@ -2,7 +2,7 @@
 # This file is part of Odoo. The COPYRIGHT file at the top level of
 # this module contains the full copyright notices and license terms.
 
-from openerp import api, models
+from odoo import api, models
 
 
 class AccountTaxMFGT(models.AbstractModel):

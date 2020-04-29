@@ -4,21 +4,21 @@
 
         <menuitem
             id="menu_mfgt_plane_management"
-            parent="base.menu_base_partner"
+            parent="sale.sale_menu_root"
             name="Plane Mangement"
-            groups="base.group_sale_manager,base.group_sale_salesman"/>
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman"/>
 
         <menuitem
             id="menu_mfgt_plane_management_control"
             parent="mfgt_plane_management.menu_mfgt_plane_management"
             name="Mangement"
-            groups="base.group_sale_manager,base.group_sale_salesman"/>
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman"/>
 
         <menuitem
             id="menu_mfgt_plane_management_settings"
             parent="mfgt_plane_management.menu_mfgt_plane_management"
             name="Settings"
-            groups="base.group_sale_manager,base.group_sale_salesman"/>
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman"/>
 
         <record id="mfgt_plane_stc_tree_view" model="ir.ui.view">
             <field name="name">mfgt.plane.stc.tree.view</field>
@@ -64,7 +64,7 @@
             parent="mfgt_plane_management.menu_mfgt_plane_management_settings"
             name="Supplement Type Certificates"
             sequence="20"
-            groups="base.group_sale_manager,base.group_sale_salesman"/>
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman"/>
 
         <record id="mfgt_plane_mca_tree_view" model="ir.ui.view">
             <field name="name">mfgt.plane.mca.tree.view</field>
@@ -110,7 +110,7 @@
             parent="mfgt_plane_management.menu_mfgt_plane_management_settings"
             name="Minor Change Approvals"
             sequence="30"
-            groups="base.group_sale_manager,base.group_sale_salesman"/>
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman"/>
 
         <record id="mfgt_plane_management_tree_view" model="ir.ui.view">
             <field name="name">mfgt.plane.managment.tree.view</field>
@@ -242,7 +242,7 @@
             parent="mfgt_plane_management.menu_mfgt_plane_management_control"
             name="Planes"
             sequence="10"
-            groups="base.group_sale_manager,base.group_sale_salesman"/>
+            groups="sales_team.group_sale_manager,sales_team.group_sale_salesman"/>
 
     </data>
 </odoo>

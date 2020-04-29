@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_mfgt_plane_management_user,mfgt.plane.management.user,model_mfgt_plane_management,base.group_sale_salesman,1,1,1,0
-access_mfgt_plane_management_manager,mfgt.plane.management.manager,model_mfgt_plane_management,base.group_sale_manager,1,1,1,1
-access_mfgt_plane_stc_user,mfgt.plane.stc.user,model_mfgt_plane_stc,base.group_sale_salesman,1,1,1,0
-access_mfgt_plane_stc_manager,mfgt.plane.stc.manager,model_mfgt_plane_stc,base.group_sale_manager,1,1,1,1
-access_mfgt_plane_mca_user,mfgt.plane.mca.user,model_mfgt_plane_mca,base.group_sale_salesman,1,1,1,0
-access_mfgt_plane_mca_manager,mfgt.plane.mca.manager,model_mfgt_plane_mca,base.group_sale_manager,1,1,1,1
+access_mfgt_plane_management_user,mfgt.plane.management.user,model_mfgt_plane_management,sales_team.group_sale_salesman,1,1,1,0
+access_mfgt_plane_management_manager,mfgt.plane.management.manager,model_mfgt_plane_management,sales_team.group_sale_manager,1,1,1,1
+access_mfgt_plane_stc_user,mfgt.plane.stc.user,model_mfgt_plane_stc,sales_team.group_sale_salesman,1,1,1,0
+access_mfgt_plane_stc_manager,mfgt.plane.stc.manager,model_mfgt_plane_stc,sales_team.group_sale_manager,1,1,1,1
+access_mfgt_plane_mca_user,mfgt.plane.mca.user,model_mfgt_plane_mca,sales_team.group_sale_salesman,1,1,1,0
+access_mfgt_plane_mca_manager,mfgt.plane.mca.manager,model_mfgt_plane_mca,sales_team.group_sale_manager,1,1,1,1

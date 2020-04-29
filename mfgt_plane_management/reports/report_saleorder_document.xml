@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-        <template id="mfgt_plane_management_report_assets_common" inherit_id="report.assets_common">
+        <template id="mfgt_plane_management_report_assets_common" inherit_id="web.assets_common">
             <xpath expr="." position="inside">
                 <link href="/mfgt_plane_management/static/src/css/mfgt_report.css" rel="stylesheet"/>
             </xpath>

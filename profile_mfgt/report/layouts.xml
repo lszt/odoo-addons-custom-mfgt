@@ -19,7 +19,7 @@
         </record>
 
         <template id="assets_common"
-                  inherit_id="report.assets_common">
+                  inherit_id="web.assets_common">
             <xpath expr="." position="inside">
                 <link href="/profile_mfgt/static/src/css/report.css" rel="stylesheet"/>
             </xpath>

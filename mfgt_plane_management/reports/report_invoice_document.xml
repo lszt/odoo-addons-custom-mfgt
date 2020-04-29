@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-       <template id="report_invoice_document_plane_management" inherit_id="profile_mfgt.report_invoice_document">
+       <template id="report_invoice_document_plane_management" inherit_id="account.report_invoice_document">
             <xpath expr="//div[@id='informations']" position="after">
 
                 <t t-set="plane" t-value="False"/>

@@ -2,8 +2,8 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 
-from openerp import models, api, _
-from openerp.exceptions import Warning
+from odoo import models, api, _
+from odoo.exceptions import Warning
 
 
 class AccountInvoice(models.Model):
