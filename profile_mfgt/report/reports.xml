@@ -3,31 +3,31 @@
     <data>
 
         <record id="account.account_invoices"
-                model="ir.actions.report.xml">
+                model="ir.actions.report">
             <field name="paperformat_id"
                    ref="paperformat_a4_din5008"/>
       </record>
 
-      <record id="sale.report_sale_order"
-              model="ir.actions.report.xml">
+      <record id="sale.action_report_saleorder"
+              model="ir.actions.report">
           <field name="paperformat_id"
                  ref="paperformat_a4_din5008"/>
       </record>
 
       <record id="purchase.action_report_purchase_order"
-              model="ir.actions.report.xml">
+              model="ir.actions.report">
           <field name="paperformat_id"
                  ref="paperformat_a4_din5008"/>
       </record>
 
       <record id="purchase.report_purchase_quotation"
-              model="ir.actions.report.xml">
+              model="ir.actions.report">
           <field name="paperformat_id"
                  ref="paperformat_a4_din5008"/>
       </record>
 
       <record id="account.account_invoices"
-              model="ir.actions.report.xml">
+              model="ir.actions.report">
           <field name="paperformat_id"
                  ref="paperformat_a4_din5008"/>
       </record>

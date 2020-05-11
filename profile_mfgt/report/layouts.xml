@@ -58,13 +58,13 @@
             </div>
         </template>
 
-        <template id="external_layout"
-                  inherit_id="report.external_layout">
-            <xpath expr="//t[@t-call='report.external_layout_header']"
+        <template id="external_layout_standard"
+                  inherit_id="web.external_layout_standard">
+            <xpath expr="//div[@class='header']"
                    position="replace">
                 <t t-call="profile_mfgt.external_layout_header"/>
             </xpath>
-            <xpath expr="//t[@t-call='report.external_layout_footer']"
+            <xpath expr="//div[@class='footer o_standard_footer']"
                    position="replace">
                 <t t-call="profile_mfgt.external_layout_footer"/>
             </xpath>
