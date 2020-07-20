@@ -22,7 +22,6 @@
 	'l10n_ch',
 	'l10n_ch_reports',
 	'mfgt_partner_additions',
-	'mfgt_product_sale_section',
 	'mfgt_invoice_open',
     ],
     'data': [
@@ -34,7 +33,7 @@
        'report/report_invoice.xml',
        'data/report_paperformat.xml',
        'data/account_tags.xml',
-       'data/account_financial_report.xml',
+       #'data/account_financial_report.xml',
        'report/product_label.xml',
        'views/sale_order.xml',
        'views/stock.xml',
