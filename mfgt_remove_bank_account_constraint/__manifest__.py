@@ -15,5 +15,5 @@ Removes Constraint for Bank Account on BVR-Payment
     'data': [
     ],
     'installable': True,
-    'auto_install': False,
+    'active': False,
 }
