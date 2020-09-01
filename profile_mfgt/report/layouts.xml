@@ -29,7 +29,11 @@
             <div class="header" style="font-size: 7pt;">
                 <div class="row">
                     <div class="col-7">
+<<<<<<< HEAD
                         <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" style="width:290px; position:absolute; left:3px;"/>
+=======
+                        <img t-if="company.logo" t-att-src="image_data_uri(company.logo)" class="float-left" alt="Logo" style="width:290px; position:absolute; left:3px;"/>
+>>>>>>> c2462866cf0cd2822f6e170cb88a6afd0709211c
                     </div>
                     <div class="col-5" style="padding-left:13mm;">
                         <b><span t-field="company.partner_id.name"/></b><br/>
@@ -39,7 +43,14 @@
                     </div>
                 </div>
                 <div class="row" style="margin-top: 10px; padding-left:82px;">
+<<<<<<< HEAD
                     <div class="col-5 offset-7">
+=======
+                    <div class="col-7">
+
+                    </div>
+                    <div class="col-5 ">
+>>>>>>> c2462866cf0cd2822f6e170cb88a6afd0709211c
                         <span t-field="company.phone"/> / <span t-field="company.email"/> / <span t-field="company.website"/><br/>
                         UID / MWSt.: CHE-109.029.890<br/>
                         IBAN: CH19 0900 0000 8400 3086 2
@@ -47,9 +58,24 @@
                 </div>
             </div>
         </template>
-
+<template id="web.address_layout">
+        <t t-set="colclass" t-value="('col-md-5' if report_type == 'html' else 'col-5') + ' ml-auto'"/>
+        <t t-if="address">
+            <div class="address row" style="margin-left:18mm;">
+                <t t-if="information_block">
+                    <t t-set="colclass" t-value="'col-5 offset-1'"/>
+                    <div name="information_block" class="col-6">
+                        <t t-raw="information_block"/>
+                    </div>
+                </t>
+                <div name="address" t-att-class="colclass">
+                    <t t-raw="address"/>
+                </div>
+            </div>
+        </t>
+    </template>
         <template id="external_layout_footer">
-            <div class="footer" style="margin-left:35mm;">
+            <div class="footer" style="margin-left:20mm;">
                 <div class="row" style="border-top:1px solid #000000;">
                     <div class="col-12" style="margin-top:5px;">
                         <b>Flugplatz Lommis TG <span style="padding:0 16px 0 16px;">|</span> Flugschule <span style="padding:0 16px 0 16px;">|</span> Rundflüge <span style="padding:0 16px 0 16px;">|</span> Flugzeug-Charter <span style="padding:0 16px 0 16px;">|</span> Luftfahrzeug-Unterhaltsbetrieb</b>
