@@ -22,7 +22,7 @@
                 <t t-set="salesperson" t-value="doc.user_id"/>
                 <t t-set="salesteam" t-value="doc.team_id"/>
                 <div t-if="salesperson" class="row" style="font-size: 7pt; margin-bottom: 10px">
-                    <div class="col-xs-5 col-xs-offset-7 salesteam">
+                    <div class="col-5 offset-7 salesteam">
                         <span t-field="salesteam.name"/><br/>
                         <span t-field="salesperson.name"/><br/>
                         <span t-field="salesperson.phone"/> / <span t-field="salesteam.alias_name"/>@<span t-field="salesteam.alias_domain"/>
@@ -30,10 +30,10 @@
                 </div>
             </xpath>
             <xpath expr="//h2" position="before">
-                <div class="mfgt-company-city-date-line col-xs-5 col-xs-offset-7">
+                <div class="mfgt-company-city-date-line col-5 offset-7">
                     <span t-field="doc.company_id.city"/>,
-                    <span t-field="doc.date_order"
-                          t-field-options='{"date_only": true}'/>
+                    <span t-esc="doc.date_order"
+                          t-options="{&quot;widget&quot;: &quot;date&quot;}"/>
                 </div>
             </xpath>
 
@@ -117,7 +117,7 @@
             </xpath>
             <xpath expr="//div[@name='total']" position="replace">
                 <div class="row" name="total">
-                    <div class="col-xs-4 pull-right">
+                    <div class="col-4 pull-right">
                         <table class="table table-condensed">
                             <tr class="border-black">
                                 <td><strong>Total Without Taxes</strong></td>

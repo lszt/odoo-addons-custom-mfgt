@@ -7,21 +7,21 @@
                 <div class="page" style="margin-left:83px;">
                     <t t-set="salesperson" t-value="o.create_uid"/>
                     <div t-if="salesperson" class="row" style="font-size: 7pt; margin-bottom: 10px">
-                        <div class="col-xs-5 col-xs-offset-6 salesteam" style="padding-left:78px;">
+                        <div class="col-5 offset-6 salesteam" style="padding-left:78px;">
                             Maintenance<br/>
                             <span t-field="salesperson.name"/><br/>
                             +41 52 366 33 41 / maintenance@mfgt.ch
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-6">
                             <div t-if="o.partner_id" name="partner_header">
                                 <div t-field="o.partner_id"
                                    t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
                             </div>
                         </div>
                     </div>
-                    <div class="mfgt-company-city-date-line col-xs-5 col-xs-offset-7">
+                    <div class="mfgt-company-city-date-line col-5 offset-7">
                         <span t-field="o.company_id.city"/>,
                         <span t-esc="time.strftime('%d.%m.%Y',time.strptime(o.create_date,'%Y-%m-%d %H:%M:%S'))"/>
                     </div>
@@ -29,7 +29,7 @@
                         <span t-field="o.name"/>
                     </h2>
                     <div t-if="o.note" class="row mt64 mb24">
-                        <div class="col-xs-12">
+                        <div class="col-12">
                             <span t-field="o.note"/>
                         </div>
                     </div>

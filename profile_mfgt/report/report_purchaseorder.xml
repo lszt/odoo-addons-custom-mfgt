@@ -7,12 +7,12 @@
                 <div class="page" style="margin-left:80px;">
                     <div class="oe_structure"/>
                     <div class="row mt32 mb32">
-                        <div class="col-xs-6">
+                        <div class="col-6">
                             <div t-field="o.partner_id"
                                 t-field-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true, "phone_icons": true}'/>
                                 <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
                         </div>
-                        <div class="col-xs-5 col-xs-offset-1">
+                        <div class="col-5 offset-1">
                             <strong>Shipping address:</strong>
                             <div t-if="o.dest_address_id">
                                 <div t-field="o.dest_address_id"
@@ -37,7 +37,7 @@
                         </div>
                     </div>
 
-                    <div class="mfgt-company-city-date-line col-xs-5 col-xs-offset-7">
+                    <div class="mfgt-company-city-date-line col-5 offset-7">
                         <span t-field="o.company_id.city"/>,
                         <span t-field="o.date_order"
                               t-field-options='{"date_only": true}'/>
@@ -47,15 +47,15 @@
                     <h2 t-if="o.state == 'draft'">Request for Quotation <span t-field="o.name"/></h2>
 
                     <div class="row mt32 mb32">
-                        <div t-if="o.name" class="col-xs-3">
+                        <div t-if="o.name" class="col-3">
                             <strong>Our Order Reference:</strong>
                             <p t-field="o.name"/>
                         </div>
-                        <div t-if="o.partner_ref" class="col-xs-3">
+                        <div t-if="o.partner_ref" class="col-3">
                             <strong>Your Order Reference</strong>
                             <p t-field="o.partner_ref"/>
                         </div>
-                        <div t-if="o.date_order" class="col-xs-3">
+                        <div t-if="o.date_order" class="col-3">
                             <strong>Order Date:</strong>
                             <p t-field="o.date_order" t-field-options='{"date_only": true}'/>
                         </div>
@@ -95,7 +95,7 @@
                     </table>
 
                     <div class="row">
-                        <div class="col-xs-4 pull-right">
+                        <div class="col-4 pull-right">
                             <table class="table table-condensed">
                                 <tr class="border-black">
                                     <td><strong>Total Without Taxes</strong></td>
