@@ -4,165 +4,167 @@
 
         <template id="mfgt_plane_management_report_assets_common" inherit_id="web.assets_common">
             <xpath expr="." position="inside">
-                <link href="/mfgt_plane_management/static/src/css/mfgt_report.css" rel="stylesheet"/>
+                <link href="/mfgt_plane_management/static/src/less/mfgt_report.less" rel="stylesheet"/>
             </xpath>
         </template>
 
-        <template id="report_saleorder_document" inherit_id="sale.report_saleorder_document">
+        <template id="report_saleorder_document" inherit_id="profile_mfgt.report_saleorder_document">
             <xpath expr="//div[@id='informations']" position="after">
                 <t t-if="doc.plane_id">
-                    <div class="row mfgtsopl">
-                        <div class="col-xs-6">
+                    <div class="row mt16">
+                        <div class="col-6">
                             <b>Technical Contact</b>
                             <table>
                                 <tr>
-                                    <td class="width">Contact</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.name"/></td>
+                                    <td style="width:150px;">Contact</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.technical_contact_id.name"/></td>
                                 </tr>
                                 <tr t-if="doc.plane_id.technical_contact_id.phone">
                                     <td>Phone</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.phone"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.technical_contact_id.phone"/></td>
                                 </tr>
                                 <tr t-if="doc.plane_id.technical_contact_id.phone_company">
                                     <td>Phone</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.phone_company"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.technical_contact_id.phone_company"/></td>
                                 </tr>
                                 <tr t-if="doc.plane_id.technical_contact_id.mobile">
                                     <td>Phone</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.mobile"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.technical_contact_id.mobile"/></td>
                                 </tr>
                                 <tr t-if="doc.plane_id.technical_contact_id.email">
                                     <td>E-Mail</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.technical_contact_id.email"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.technical_contact_id.email"/></td>
                                 </tr>
                             </table>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-6">
                             <b>Informations</b><br/>
                             <span t-field="doc.plane_special_information"/>
                         </div>
                     </div>
-                    <div class="row mfgtsopl" style="font-size:12px;">
-                        <div class="col-xs-6">
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-6">
                             <b><span t-field="doc.plane_id.name"/></b>
                             <table>
                                 <tr>
-                                    <td class="width">Manufacturer</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.manufacturer"/></td>
+                                    <td style="width:150px;">Manufacturer</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.manufacturer"/></td>
                                 </tr>
                                 <tr>
                                     <td>Type</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.type"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.type"/></td>
                                 </tr>
                                 <tr>
                                     <td>Factory Number</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.factory_number"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.factory_number"/></td>
                                 </tr>
                                 <tr>
                                     <td>Construction Year</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.construction_year"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.construction_year"/></td>
                                 </tr>
                                 <tr>
                                     <td>TCDS No.</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.tcds_no"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.tcds_no"/></td>
                                 </tr>
                                 <tr>
                                     <td>Legal Base</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.legal_base"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.legal_base"/></td>
                                 </tr>
                                 <tr>
                                     <td>Registration</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.registration"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.registration"/></td>
                                 </tr>
                                 <tr>
                                     <td>Commercial Use</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.commercial_use"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.commercial_use"/></td>
                                 </tr>
                                 <tr>
                                     <td>Noise Level</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.noise_level"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.noise_level"/></td>
                                 </tr>
                                 <tr>
                                     <td>Noise Rate Class</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.noise_rate_class"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.noise_rate_class"/></td>
                                 </tr>
                                 <tr>
                                     <td>Gasoline</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.gasoline"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.gasoline"/></td>
                                 </tr>
                                 <tr>
                                     <td>Max. Take-Off Weight</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.max_takeoff_weight"/></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-xs-6">
-                            <b>Engine</b>
-                            <table>
-                                <tr>
-                                    <td class="width">Manufacturer</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.engine_manufacturer"/></td>
-                                </tr>
-                                <tr>
-                                    <td>Type</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.engine_type"/></td>
-                                </tr>
-                                <tr>
-                                    <td>Number</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.engine_number"/></td>
-                                </tr>
-                                <tr>
-                                    <td>Construction Year</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.engine_construction_year"/></td>
-                                </tr>
-                                <tr>
-                                    <td>TCDS No.</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.engine_tcds_no"/></td>
-                                </tr>
-                            </table>
-                        </div>
-                        <div class="col-xs-6">
-                            <b>Propeller</b>
-                            <table>
-                                <tr>
-                                    <td class="width">Manufacturer</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.propeller_manufacturer"/></td>
-                                </tr>
-                                <tr>
-                                    <td>Type</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.propeller_type"/></td>
-                                </tr>
-                                <tr>
-                                    <td>Number</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.propeller_number"/></td>
-                                </tr>
-                                <tr>
-                                    <td>Construction Year</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.propeller_construction_year"/></td>
-                                </tr>
-                                <tr>
-                                    <td>TCDS No.</td>
-                                    <td class="border-left"><span t-field="doc.plane_id.propeller_tcds_no"/></td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.max_takeoff_weight"/></td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-                    <div class="row mfgtsopl">
-                        <div class="col-xs-6">
-                            <b>Supplement Type Certificate (STC)</b>
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-6">
+                            <b>Engine</b>
                             <table>
-                                <tr t-foreach="doc.plane_id.supplement_type_certificate_ids" t-as="stc">
-                                    <td class="width"><span t-field="stc.name"/></td>
-                                    <td class="padding"><span t-field="stc.description"/></td>
+                                <tr>
+                                    <td style="width:150px;">Manufacturer</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.engine_manufacturer"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.engine_type"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Number</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.engine_number"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Construction Year</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.engine_construction_year"/></td>
+                                </tr>
+                                <tr>
+                                    <td>TCDS No.</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.engine_tcds_no"/></td>
                                 </tr>
                             </table>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-6">
+                            <b>Propeller</b>
+                            <table>
+                                <tr>
+                                    <td style="width:150px;">Manufacturer</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.propeller_manufacturer"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Type</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.propeller_type"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Number</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.propeller_number"/></td>
+                                </tr>
+                                <tr>
+                                    <td>Construction Year</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.propeller_construction_year"/></td>
+                                </tr>
+                                <tr>
+                                    <td>TCDS No.</td>
+                                    <td style="border-left: 1px solid grey; padding-left: 10px;"><span t-field="doc.plane_id.propeller_tcds_no"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-top: 40px;">
+                        <div class="col-6">
+                            <b>Supplement Type Certificate (STC)</b>
+                            <table>
+                                <tr t-foreach="doc.plane_id.supplement_type_certificate_ids" t-as="stc">
+                                    <td style="width:150px;"><span t-field="stc.name"/></td>
+                                    <td style="padding-left: 11px;"><span t-field="stc.description"/></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-6">
                             <b>Minor Change Approval</b>
                             <table>
                                 <tr t-foreach="doc.plane_id.minor_change_approval_ids" t-as="mca">
-                                    <td class="width"><span t-field="mca.name"/></td>
-                                    <td class="padding"><span t-field="mca.description"/></td>
+                                    <td style="width:150px;"><span t-field="mca.name"/></td>
+                                    <td style="padding-left: 11px;"><span t-field="mca.description"/></td>
                                 </tr>
                             </table>
                         </div>

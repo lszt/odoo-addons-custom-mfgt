@@ -585,7 +585,7 @@ msgstr "Bitte benutzen Sie den folgenden Verwendungszweck für Ihre Zahlung:"
 #. module: profile_mfgt
 #: model:ir.actions.report,name:profile_mfgt.action_mfgt_product_label
 msgid "Product Label"
-msgstr ""
+msgstr "Produktetikett"
 
 #. module: profile_mfgt
 #: model_terms:ir.ui.view,arch_db:profile_mfgt.report_purchaseorder_document
@@ -663,10 +663,10 @@ msgstr "Lieferanten-Gutschrift"
 #: code:addons/profile_mfgt/model/account_invoice.py:24
 #, python-format
 msgid "Warning!"
-msgstr ""
+msgstr "Warnung!"
 
 #. module: profile_mfgt
 #: code:addons/profile_mfgt/model/account_invoice.py:25
 #, python-format
 msgid "You must first select a partner!"
-msgstr ""
+msgstr "Sie müssen zuerst einen Partner wählen!"

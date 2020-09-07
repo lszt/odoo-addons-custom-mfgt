@@ -6,6 +6,7 @@ from odoo import models, fields, api, _
 
 class MFGTSupplementTypeCertificate(models.Model):
     _name = 'mfgt.plane.stc'
+    _description = 'Plane Supplement Management'
 
     name = fields.Char('Name', required=True)
     description = fields.Char('Description', required=True)
@@ -13,12 +14,14 @@ class MFGTSupplementTypeCertificate(models.Model):
 
 class MFGTMinorChangeApprovals(models.Model):
     _name = 'mfgt.plane.mca'
+    _description = 'Plane Management Change Approvals'
 
     name = fields.Char('Name', required=True)
     description = fields.Char('Description', required=True)
 
 class MFGTPlaneManagement(models.Model):
     _name = 'mfgt.plane.management'
+    _description = 'Plane Management'
     _order = 'name asc'
 
     name = fields.Char('Plante Name', required=True)

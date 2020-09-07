@@ -3,10 +3,10 @@
     <data>
 
         <template id="report_purchasequotation_document" inherit_id="purchase.report_purchasequotation_document">
+            <xpath expr="//t[@t-set='address']" position="replace"/>
             <xpath expr="//div[@class='page']" position="replace">
-                <div class="page" style="margin-left:80px;">
-                    <div class="oe_structure"/>
-
+                <div class="page" style="margin-left:80px; font-size:12px;">
+                     <div class="oe_structure"/>
                     <div class="row mt32 mb32">
                         <div class="col-6">
                             <div t-field="o.partner_id"
@@ -17,14 +17,15 @@
                             <strong>Shipping address:</strong>
                             <div t-if="o.dest_address_id">
                                 <div t-field="o.dest_address_id"
-                                    t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true}'/>
+                                    t-field-options='{"widget": "contact", "fields": ["address", "name"], "no_marker": true,}'/>
                                 <div>
                                     <span class="fa fa-phone"> +41 52 366 33 41</span><br/>
                                     <span class="fa fa-fax"> +41 52 366 33 42</span><br/>
                                     <span>maintenance@mfgt.ch</span>
                                 </div>
                             </div>
-                            <div t-if="not o.dest_address_id and o.picking_type_id.warehouse_id">
+
+                            <div t-if="not o.dest_address_id and o.picking_type_id and o.picking_type_id.warehouse_id">
                                 <span t-field="o.picking_type_id.warehouse_id.name"/>
                                 <div t-field="o.picking_type_id.warehouse_id.partner_id"
                                     t-field-options='{"widget": "contact", "fields": ["address"], "no_marker": true}'/>
@@ -37,18 +38,17 @@
                         </div>
                     </div>
 
-                    <div class="mfgt-company-city-date-line col-5 offset-7">
+                    <div class="mfgt-company-city-date-line col-5 offset-7 mb32">
                         <span t-field="o.company_id.city"/>,
                         <span t-field="o.date_order"
-                              t-field-options='{"date_only": true}'/>
+                              t-options='{"widget": "date"}'/>
                     </div>
 
                     <h2>Request for Quotation <span t-field="o.name"/></h2>
 
-                    <table class="table table-condensed">
+                    <table class="table table-sm mt32">
                         <thead>
                             <tr>
-                                <th><strong>Product No.</strong></th>
                                 <th><strong>Description</strong></th>
                                 <th class="text-center"><strong>Expected Date</strong></th>
                                 <th class="text-right"><strong>Qty</strong></th>
@@ -57,22 +57,19 @@
                         <tbody>
                             <tr t-foreach="o.order_line" t-as="order_line">
                                 <td>
-                                    <span t-field="order_line.product_id.default_code"/>
-                                </td>
-                                <td>
-                                    <span t-field="order_line.product_id.name"/>
+                                    <span t-field="order_line.name"/>
                                 </td>
                                 <td class="text-center">
-                                    <span t-field="order_line.date_planned" t-field-options='{"date_only": true}'/>
+                                    <span t-field="order_line.date_planned" t-options='{"widget": "date"}'/>
                                 </td>
                                 <td class="text-right">
                                     <span t-field="order_line.product_qty"/>
-                                    <span t-field="order_line.product_uom" groups="product.group_uom"/>
+                                    <span t-field="order_line.product_uom" groups="uom.group_uom"/>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-
+        
                     <p t-field="o.notes"/>
 
                     <div class="oe_structure"/>
