@@ -11,7 +11,7 @@
                     <t t-set="salesperson" t-value="doc.user_id"/>
                     <t t-set="salesteam" t-value="doc.team_id"/> 
                     <div t-if="salesperson" class="row">
-                        <div class="col-5 offset-7 salesteam">
+                        <div class="col-5 offset-7 salesteam" style="font-size: 7pt; margin-bottom: 10px">
                             <span t-field="salesteam.name"/><br/>
                             <span t-field="salesperson.name"/><br/>
                             <span t-field="salesperson.phone"/> / <span t-field="salesteam.alias_name"/>@<span t-field="salesteam.alias_domain"/>
