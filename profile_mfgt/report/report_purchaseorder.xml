@@ -9,9 +9,11 @@
                     <div class="oe_structure"/>
                     <div class="row mt32 mb32">
                         <div class="col-6">
-                            <div t-field="o.partner_id"
-                                t-field-options='{"widget": "contact", "fields": ["address", "name", "phone", "fax"], "no_marker": true, "phone_icons": true}'/>
-                                <p t-if="o.partner_id.vat">VAT: <span t-field="o.partner_id.vat"/></p>
+                            <span t-field="o.partner_id.name"/><br/>
+                            <span t-field="o.partner_id.street"/><br/>
+                            <t t-if="o.partner_id.street2"><span t-field="o.partner_id.street2"/><br/></t>
+                            <span t-field="o.partner_id.zip"/> <span t-field="o.partner_id.city"/><br/>
+                            <span t-if="o.partner_id.country_id" t-field="o.partner_id.country_id"/>
                         </div>
                         <div class="col-5 offset-1">
                             <strong>Shipping address:</strong>
