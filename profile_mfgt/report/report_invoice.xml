@@ -104,7 +104,6 @@
                                     <t t-if="not line.display_type" name="account_invoice_line_accountable">
                                         <td name="account_invoice_line_no"><span t-field="line.product_id.default_code"/></td>
                                         <td name="account_invoice_line_name">
-                                            <span t-field="line.product_id.name"/><br/>
                                             <span t-field="line.name"/>
                                         </td>
                                         <td class="d-none"><span t-field="line.origin"/></td>
