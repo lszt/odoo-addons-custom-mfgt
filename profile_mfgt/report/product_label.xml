@@ -5,7 +5,7 @@
         <template id="mfgt_product_label_document">
              <t t-foreach="o.move_ids_without_package" t-as="move">
                 <t t-foreach="range(0, int(move.product_qty + 1))" t-as="r">
-                    <div class="row" style="font-size:38px; margin:0 !important; padding:0 !important; height:29mm !important;">
+                    <div class="row" style="font-size:55px; margin:0 !important; padding:0 !important; height:29mm !important;">
                         <t t-if="r == 0">
                           <div class="col-8" style="margin:0 !important; padding:0 !important;">
                               <div t-field="move.product_id.name"/>
@@ -22,7 +22,7 @@
                               <span t-field="move.product_id.name"/><br/>
                               <span t-field="move.product_id.default_code"/><br/>
                               <span t-field="o.origin"/><br/>
-                              <span t-field="move.location_dest_id.name"/><br/><br/><br/>
+                              <span t-field="move.location_dest_id.name"/><br/>
                               <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.origin, 2000, 100)" style="width:800px; height:100px;"/>
                           </div>
                           <div class="col-4" style="margin:0 !important; padding:0 !important;">
