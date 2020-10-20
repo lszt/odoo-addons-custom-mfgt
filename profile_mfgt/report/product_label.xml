@@ -10,7 +10,7 @@
                           <div class="col-8" style="margin:0 !important; padding:0 !important;">
                               <div t-field="move.product_id.name"/>
                               <div t-field="move.product_id.default_code"/>
-                              <div t-field="move.location_dest_id.name"/>
+                              <div t-field="move.move_line_ids[0].location_dest_id.name"/>
                           </div>
                           <div class="col-4" style="margin:0 !important; padding:0 !important;">
                               <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('QR_quiet', move.product_id.default_code, 2000, 2000)" style="width:350px;height:350px;"/>
@@ -22,7 +22,7 @@
                               <span t-field="move.product_id.name"/><br/>
                               <span t-field="move.product_id.default_code"/><br/>
                               <span t-field="o.origin"/><br/>
-                              <span t-field="move.location_dest_id.name"/><br/>
+                              <span t-field="move.move_line_ids[0].location_dest_id.name"/><br/>
 <!--
                               <img alt="Barcode" t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('Code128', o.origin, 2000, 100)" style="width:800px; height:100px;"/>
 -->
