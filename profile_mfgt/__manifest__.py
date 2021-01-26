@@ -3,7 +3,7 @@
 # this module contains the full copyright notices and license terms.
 {
     'name': 'Profile MFGT - Motorfluggruppe Thurgau',
-    'version': '12.0.0.1.17',
+    'version': '12.0.0.1.19',
     'author': 'Motorfluggruppe Thurgau MFGT',
     'category': 'Custom',
     'website': 'https://www.mfgt.ch/',
@@ -35,6 +35,7 @@
        'data/account_tags.xml',
        #'data/account_financial_report.xml',
        'report/product_label.xml',
+       'views/account_move_view.xml',
        'views/sale_order.xml',
        'views/stock.xml',
        'report/report_deliveryslip.xml',
