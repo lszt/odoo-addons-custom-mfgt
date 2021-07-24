@@ -147,6 +147,11 @@
                             <group string="Service">
                                 <field name="next_service"/>
                                 <field name="next_service_type"/>
+                                <field name="camo_managed"/>
+                                <field name="arc_expiration"/>
+                                <field name="next_arc_type"/>
+                                <field name="last_arc_date"/>
+                                <field name="last_arc_report"/>
                             </group>
                         </group>
                         <notebook>

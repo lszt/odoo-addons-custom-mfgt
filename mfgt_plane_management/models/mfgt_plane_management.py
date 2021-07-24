@@ -61,6 +61,11 @@ class MFGTPlaneManagement(models.Model):
     sale_ids = fields.One2many('sale.order', 'plane_id', string='Sale Orders')
     next_service = fields.Date('Next Service')
     next_service_type = fields.Char('Service Type')
+    arc_expiration = fields.Date('ARC Expiration')
+    next_arc_type = fields.Selection([('Full Review','fr'),('1st Extension','ext1'),('2nd Extension','ext2')],'ARC Type')
+    last_arc_date = fields.Date('Last ARC')
+    last_arc_report = fields.Char('Last ARC Report')
+    camo_managed = fields.Boolean('CAMO managed')
 
     technical_contact_id = fields.Many2one('res.partner', string='Technical Contact')
     technical_contact_phone = fields.Char(related='technical_contact_id.phone', string='Phone')
