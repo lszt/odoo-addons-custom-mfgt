@@ -62,7 +62,7 @@ class MFGTPlaneManagement(models.Model):
     next_service = fields.Date('Next Service')
     next_service_type = fields.Char('Service Type')
     arc_expiration = fields.Date('ARC Expiration')
-    next_arc_type = fields.Selection([('fr','Full Review'),('ext1','1st Extension'),('ext2','2nd Extension')],'ARC Type')
+    next_arc_type = fields.Selection([('fr','Full Review'),('ext1','1st Extension'),('ext2','2nd Extension')],'Next ARC Type')
     last_arc_date = fields.Date('Last ARC')
     last_arc_report = fields.Char('Last ARC Report')
     camo_managed = fields.Boolean('CAMO managed')
