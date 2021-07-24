@@ -118,9 +118,10 @@
             <field name="arch" type="xml">
                 <tree string="Planes">
                     <field name="name"/>
-                    <field name="registration"/>
                     <field name="next_service"/>
                     <field name="next_service_type"/>
+                    <field name="arc_expiration"/>
+                    <field name="camo_managed"/>
                     <field name="owner_id"/>
                     <field name="manufacturer"/>
                     <field name="type"/>
