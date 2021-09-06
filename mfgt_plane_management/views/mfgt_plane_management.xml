@@ -125,6 +125,7 @@
                     <field name="owner_id"/>
                     <field name="manufacturer"/>
                     <field name="type"/>
+                    <field name="active" invisible="1"/>
                 </tree>
             </field>
         </record>
