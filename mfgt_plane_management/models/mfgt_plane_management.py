@@ -24,6 +24,10 @@ class MFGTPlaneManagement(models.Model):
     _description = 'Plane Management'
     _order = 'name asc'
 
+    active = fields.Boolean(
+        'Active', default=True,
+        help="If unchecked, it will allow you to hide the plane without removing it.")
+
     name = fields.Char('Plante Name', required=True)
     registration = fields.Char('Registration', required=True)
     manufacturer = fields.Char('Producer', required=True)
