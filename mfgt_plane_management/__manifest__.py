@@ -3,7 +3,7 @@
 
 {
     'name' : 'MFGT Plane Management',
-    'version': '12.0.1.4',
+    'version': '12.0.1.5',
     'website' : 'http://syscoon.com',
     'category': 'Sales',
     'description': """
