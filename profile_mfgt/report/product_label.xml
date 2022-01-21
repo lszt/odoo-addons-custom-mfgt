@@ -39,7 +39,7 @@
 
         <template id="mfgt_product_label">
             <t t-call="web.basic_layout">
-                <div class="page">
+                <div class="page" style="margin-left:4mm">
                     <t t-foreach="docs" t-as="o">
                         <t t-call="profile_mfgt.mfgt_product_label_document"/>
                     </t>
