@@ -3,8 +3,8 @@
 
 {
     'name' : 'MFGT Plane Management',
-    'version': '12.0.1.5',
-    'website' : 'http://syscoon.com',
+    'version': '12.0.1.6',
+    'website' : 'https://mfgt.ch',
     'category': 'Sales',
     'description': """
 Management Tool for Aircraft Planes
