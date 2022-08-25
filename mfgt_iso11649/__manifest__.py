@@ -9,9 +9,9 @@
     'depends' : [
                 'account',
             ],
-    'external_dependencies': [
-                'python-stdnum',
-    ],
+    'external_dependencies': {
+                'python': ['python-stdnum'],
+    },
     'description': """
 Automatically create structured reference for QR invoice.
     """,
