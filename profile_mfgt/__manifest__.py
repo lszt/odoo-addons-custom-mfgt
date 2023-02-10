@@ -3,7 +3,7 @@
 # this module contains the full copyright notices and license terms.
 {
     'name': 'Profile MFGT - Motorfluggruppe Thurgau',
-    'version': '12.0.0.1.21',
+    'version': '12.0.0.1.22',
     'author': 'Motorfluggruppe Thurgau MFGT',
     'category': 'Custom',
     'website': 'https://www.mfgt.ch/',
@@ -13,8 +13,6 @@
 	'auth_oauth',
         'account',
         'account_accountant',
-        'account_bank_statement_import_online',
-        'account_payment_order',
         'sale',
         'sale_management',
         'purchase',
@@ -25,10 +23,7 @@
         'product_expiry',
 	'l10n_ch',
 	'l10n_ch_account_tags',
-	'l10n_ch_bank',
-	'l10n_ch_pain_base',
 	'l10n_ch_reports',
-	'l10n_ch_zip',
         'mfgt_iso11649',
 	'mfgt_partner_additions',
 	'mfgt_plane_management',
