@@ -22,7 +22,6 @@
         'product',
         'product_expiry',
 	'l10n_ch',
-	'l10n_ch_account_tags',
 	'l10n_ch_reports',
         'mfgt_iso11649',
 	'mfgt_partner_additions',
